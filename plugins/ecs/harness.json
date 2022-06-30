@@ -1,0 +1,36 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "pelotech/drone-ecs",
+        "connectorRef": "<+input>",
+        "settings": {
+          "family": "",
+          "region": "",
+          "service": "",
+          "access_key": "",
+          "memory": "",
+          "image_tag": "",
+          "image_name": "",
+          "secret_key": ""
+        }
+      }
+    },
+    "description": "The ECS plugin can be used to deploy a Docker image to an ECS environment.\nDocumentation is available here: https://plugins.drone.io/plugins/\nNOTE: Setting environment_variables is not included due to unsupported variable type\nNOTE: Setting port_mappings is not included due to unsupported variable type",
+    "name": "AWS ECS",
+    "type": "Step",
+    "tags": {
+      "source": "drone",
+      "docker": "",
+      "aws": "",
+      "ecs": "",
+      "deploy": "",
+      "amazon": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "ecs",
+    "orgIdentifier": "my-org"
+  }
+}

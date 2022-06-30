@@ -1,0 +1,37 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "joshdvir/drone-ecs-deploy",
+        "connectorRef": "<+input>",
+        "settings": {
+          "image_name": "",
+          "aws_secret_access_key": "",
+          "timeout": 300,
+          "service": "",
+          "cluster": "",
+          "aws_access_key_id": "",
+          "min": 100,
+          "max": 200,
+          "aws_region": "us-east-1"
+        }
+      }
+    },
+    "description": "This plugin allows updating an ECS service. The plugin is a wrapper for ecs-deploy, this bash works by taking the current task definition of a service and just changing the image so that all the configuration stays the same.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "AWS ECS Deploy",
+    "type": "Step",
+    "tags": {
+      "source": "drone",
+      "docker": "",
+      "aws": "",
+      "ecs": "",
+      "deploy": "",
+      "amazon": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "ecs_deploy",
+    "orgIdentifier": "my-org"
+  }
+}

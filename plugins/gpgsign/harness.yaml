@@ -1,0 +1,28 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: plugins/gpgsign
+      connectorRef: <+input>
+      settings:
+        clear_sign: false
+        key: ""
+        passphrase: ""
+        detach_sign: false
+  description: |-
+    This plugin can sign your artifacts and build results with [GnuPG](https://www.gnupg.org/).
+    Documentation is available here: https://plugins.drone.io/plugins/
+    NOTE: Setting files is not included due to unsupported variable type
+    NOTE: Setting excludes is not included due to unsupported variable type
+  name: GPG Sign
+  type: Step
+  tags:
+    sign: ""
+    source: drone
+    gpg: ""
+    artifact: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: gpgsign
+  orgIdentifier: my-org
+

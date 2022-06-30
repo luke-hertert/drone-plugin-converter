@@ -1,0 +1,26 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: appleboy/drone-jenkins
+      connectorRef: <+input>
+      settings:
+        job: ""
+        url: ""
+        token: ""
+        user: ""
+  description: |-
+    The Jenkins plugin allows you to trigger Jenkins job automatically.
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: Jenkins
+  type: Step
+  tags:
+    jenkins: ""
+    trigger: ""
+    infrastructure: ""
+    source: drone
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: jenkins
+  orgIdentifier: my-org
+

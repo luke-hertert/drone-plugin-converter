@@ -1,0 +1,34 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "techknowlogick/drone-b2",
+        "connectorRef": "<+input>",
+        "settings": {
+          "source": "",
+          "bucket": "",
+          "key": "",
+          "target": "",
+          "strip_prefix": false,
+          "account": "",
+          "path_style": ""
+        }
+      }
+    },
+    "description": "The B2 plugin uploads files and build artifacts to your B2 bucket.\nDocumentation is available here: https://plugins.drone.io/plugins/\nNOTE: Setting exclude is not included due to unsupported variable type",
+    "name": "Backblaze B ",
+    "type": "Step",
+    "tags": {
+      "backblaze": "",
+      "source": "drone",
+      "publish": "",
+      "storage": "",
+      "b2": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "b2",
+    "orgIdentifier": "my-org"
+  }
+}

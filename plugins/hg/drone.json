@@ -1,0 +1,16 @@
+{
+  "id": "hg",
+  "title": "Mercurial",
+  "author": "drone-plugins",
+  "tags": [
+    "clone",
+    "hg"
+  ],
+  "logo": "mercurial.svg",
+  "repo": "https://github.com/drone-plugins/drone-hg",
+  "image": "https://hub.docker.com/r/plugins/hg",
+  "license": "Apache License 2.0",
+  "readme": "https://github.com/drone-plugins/drone-hg/blob/master/README.md",
+  "description": "The mercurial plugin is used to clone a mercurial repository.",
+  "example": "kind: pipeline\nname: default\n\nclone:\n  disable: true\n\nsteps:\n- name: checkout\n  image: plugins/hg\n"
+}

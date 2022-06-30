@@ -1,0 +1,29 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "lizheming/drone-coveralls",
+        "connectorRef": "<+input>",
+        "settings": {
+          "token": "",
+          "debug": false
+        }
+      }
+    },
+    "description": "This plugin can upload coverage reports to Coveralls.\nDocumentation is available here: https://plugins.drone.io/plugins/\nNOTE: Setting files is not included due to unsupported variable type",
+    "name": "Coveralls",
+    "type": "Step",
+    "tags": {
+      "coveralls": "",
+      "coverage": "",
+      "test": "",
+      "source": "drone",
+      "reporting": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "coveralls",
+    "orgIdentifier": "my-org"
+  }
+}

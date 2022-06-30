@@ -1,0 +1,31 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "allgreed/drone-load-and-store",
+        "connectorRef": "<+input>",
+        "settings": {
+          "debug": false,
+          "password": "",
+          "registry": "docker.io",
+          "repo": "",
+          "archive": "",
+          "username": ""
+        }
+      }
+    },
+    "description": "This plugin can be used to load and publish images to the Docker registry. It can come in handy when the default Docker plugin cannot be used. A good example usecase is building Docker images with nix which produces a Docker image archive.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "Load and store",
+    "type": "Step",
+    "tags": {
+      "docker": "",
+      "source": "drone",
+      "publish": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "load_and_store",
+    "orgIdentifier": "my-org"
+  }
+}

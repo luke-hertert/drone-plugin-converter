@@ -1,0 +1,30 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "lddsb/drone-dingtalk-message",
+        "connectorRef": "<+input>",
+        "settings": {
+          "message_pic": false,
+          "message_color": false,
+          "sha_link": false,
+          "type": "",
+          "token": ""
+        }
+      }
+    },
+    "description": "The DingTalk can be used to send a message by DingTalk group robot.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "DingTalk",
+    "type": "Step",
+    "tags": {
+      "chat": "",
+      "source": "drone",
+      "notifications": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "dingtalk_message",
+    "orgIdentifier": "my-org"
+  }
+}

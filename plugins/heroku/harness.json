@@ -1,0 +1,31 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "plugins/heroku",
+        "connectorRef": "<+input>",
+        "settings": {
+          "api_key": "",
+          "app": "",
+          "registry": "registry.heroku.com",
+          "email": "",
+          "process_type": ""
+        }
+      }
+    },
+    "description": "The heroku plugin can be used to build and publish images to the Heroku container registry.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "Heroku",
+    "type": "Step",
+    "tags": {
+      "docker": "",
+      "heroku": "",
+      "source": "drone",
+      "publish": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "heroku",
+    "orgIdentifier": "my-org"
+  }
+}

@@ -1,0 +1,27 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: appleboy/drone-discord
+      connectorRef: <+input>
+      settings:
+        webhook_id: ""
+        avatar_url: ""
+        webhook_token: ""
+        tts: false
+        message: ""
+        username: ""
+  description: |-
+    The discord plugin posts build status messages to discord channel.
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: Discord
+  type: Step
+  tags:
+    chat: ""
+    source: drone
+    notifications: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: discord
+  orgIdentifier: my-org
+

@@ -1,0 +1,53 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "pelotech/drone-helm3",
+        "connectorRef": "<+input>",
+        "settings": {
+          "reuse_values": false,
+          "keep_history": false,
+          "kube_api_server": "",
+          "mode": "",
+          "values_files": "",
+          "force_upgrade": false,
+          "values": "",
+          "wait_for_upgrade": false,
+          "repo_ca_certificate": "",
+          "string_values": "",
+          "repo_certificate": "",
+          "lint_strictly": false,
+          "update_dependencies": false,
+          "kube_token": "",
+          "debug": false,
+          "dry_run": false,
+          "chart_version": "",
+          "release": "",
+          "chart": "",
+          "kube_certificate": "",
+          "kube_service_account": "",
+          "cleanup_failed_upgrade": false,
+          "skip_tls_verify": false,
+          "atomic_upgrade": false,
+          "namespace": "",
+          "timeout": ""
+        }
+      }
+    },
+    "description": "This plugin provides an interface to Helm 3.\nDocumentation is available here: https://plugins.drone.io/plugins/\nNOTE: Setting add_repos is not included due to unsupported variable type",
+    "name": "Helm ",
+    "type": "Step",
+    "tags": {
+      "kubernetes": "",
+      "docker": "",
+      "helm": "",
+      "source": "drone",
+      "helm3": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "helm3",
+    "orgIdentifier": "my-org"
+  }
+}

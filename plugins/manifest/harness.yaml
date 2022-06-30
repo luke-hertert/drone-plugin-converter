@@ -1,0 +1,35 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: plugins/manifest
+      connectorRef: <+input>
+      settings:
+        spec: ""
+        auto_tag: false
+        insecure: false
+        template: ""
+        tag: ""
+        password: Anonymous access
+        target: ""
+        default_tags: false
+        username: Anonymous access
+        ignore_missing: false
+  description: |-
+    This plugin can push manifests for multi-arch Docker images.
+    Documentation is available here: https://plugins.drone.io/plugins/
+    NOTE: Setting platforms is not included due to unsupported variable type
+    NOTE: Setting tags is not included due to unsupported variable type
+  name: Manifest
+  type: Step
+  tags:
+    source: drone
+    docker: ""
+    architecture: ""
+    tag: ""
+    manifest: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: manifest
+  orgIdentifier: my-org
+

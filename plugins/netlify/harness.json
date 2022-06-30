@@ -1,0 +1,31 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "lucap/drone-netlify",
+        "connectorRef": "<+input>",
+        "settings": {
+          "site_id": "",
+          "token": "",
+          "site_name": "",
+          "domain": "",
+          "enviroment": "",
+          "path": ""
+        }
+      }
+    },
+    "description": "The netlify plugin deploy your build to netlify.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "Netlify",
+    "type": "Step",
+    "tags": {
+      "deploy": "",
+      "source": "drone",
+      "netlify": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "netlify",
+    "orgIdentifier": "my-org"
+  }
+}

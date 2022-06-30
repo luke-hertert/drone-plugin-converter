@@ -1,0 +1,40 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "appleboy/drone-git-push",
+        "connectorRef": "<+input>",
+        "settings": {
+          "remote_name": "deploy",
+          "path": "current repo",
+          "branch": "master",
+          "author_name": "commiter name",
+          "commit_message": "[skip ci] Commit dirty state",
+          "remote": "",
+          "followtags": false,
+          "local_branch": "HEAD",
+          "ssh_key": "",
+          "force": false,
+          "commit": false,
+          "skip_verify": false,
+          "empty_commit": false,
+          "author_email": "commiter email"
+        }
+      }
+    },
+    "description": "Use this plugin for deploying an application via `git push`. You will need to supply Drone with a private SSH key or use the same credentials as the cloned repo to being able to push changes.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "Git Push",
+    "type": "Step",
+    "tags": {
+      "git-push": "",
+      "deploy": "",
+      "source": "drone",
+      "publish": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "git_push",
+    "orgIdentifier": "my-org"
+  }
+}

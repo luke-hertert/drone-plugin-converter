@@ -1,0 +1,33 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: drillster/drone-email
+      connectorRef: <+input>
+      settings:
+        recipients_only: false
+        attachment: ""
+        host: ""
+        body: ""
+        password: ""
+        skip_verify: false
+        subject: ""
+        from: ""
+        recipients_file: ""
+        username: ""
+        port: 587
+  description: |-
+    The email plugin can be used to notify people of a build result.
+    Documentation is available here: https://plugins.drone.io/plugins/
+    NOTE: Setting recipients is not included due to unsupported variable type
+  name: Email
+  type: Step
+  tags:
+    email: ""
+    source: drone
+    notifications: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: email
+  orgIdentifier: my-org
+

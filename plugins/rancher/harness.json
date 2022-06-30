@@ -1,0 +1,36 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "pelotech/drone-rancher",
+        "connectorRef": "<+input>",
+        "settings": {
+          "docker_image": "",
+          "confirm": false,
+          "timeout": 30,
+          "interval_millis": "",
+          "start_first": true,
+          "service": "",
+          "batch_size": "",
+          "access_key": "",
+          "url": "",
+          "secret_key": ""
+        }
+      }
+    },
+    "description": "The Rancher plugin can be used to deploy a Docker image to a Rancher environment.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "Rancher",
+    "type": "Step",
+    "tags": {
+      "docker": "",
+      "deploy": "",
+      "rancher": "",
+      "source": "drone"
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "rancher",
+    "orgIdentifier": "my-org"
+  }
+}

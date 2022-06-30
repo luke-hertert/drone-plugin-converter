@@ -1,0 +1,27 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "bh90210/dron8s",
+        "connectorRef": "<+input>",
+        "settings": {
+          "yaml": "",
+          "kubeconfig": ""
+        }
+      }
+    },
+    "description": "Yet another Kubernetes plugin for Drone using dynamic Server Side Apply to achieve `kubectl apply -f multi-configs.yaml` parity for your CI-CD pipelines.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "Dron s",
+    "type": "Step",
+    "tags": {
+      "kubernetes": "",
+      "apply": "",
+      "source": "drone"
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "dron8s",
+    "orgIdentifier": "my-org"
+  }
+}

@@ -1,0 +1,28 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: oliver006/drone-gcf
+      connectorRef: <+input>
+      settings:
+        runtime: ""
+        project: the project of the service account
+        action: ""
+        token: ""
+  description: |-
+    The GCF plugin can be used to deploy, list, and delete Google Cloud Functions.
+    Documentation is available here: https://plugins.drone.io/plugins/
+    NOTE: Setting functions is not included due to unsupported variable type
+  name: Google Cloud Functions
+  type: Step
+  tags:
+    source: drone
+    gcp: ""
+    publish: ""
+    gcf: ""
+    google: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: gcf
+  orgIdentifier: my-org
+

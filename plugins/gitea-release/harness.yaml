@@ -1,0 +1,31 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: plugins/gitea-release
+      connectorRef: <+input>
+      settings:
+        insecure: false
+        file_exists: overwrite
+        api_key: ""
+        checksum: ""
+        prerelease: false
+        title: ""
+        note: ""
+        draft: false
+        base_url: ""
+  description: |-
+    The gitea-release plugin is used to publish files and artifacts to Gitea Release.
+    Documentation is available here: https://plugins.drone.io/plugins/
+    NOTE: Setting files is not included due to unsupported variable type
+  name: Gitea Release
+  type: Step
+  tags:
+    gitea: ""
+    source: drone
+    publish: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: gitea_release
+  orgIdentifier: my-org
+

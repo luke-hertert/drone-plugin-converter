@@ -1,0 +1,34 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "robertstettner/drone-cloudformation",
+        "connectorRef": "<+input>",
+        "settings": {
+          "template": "",
+          "region": "eu-west-1",
+          "mode": "createOrUpdate",
+          "access_key": "",
+          "stackname": "",
+          "parallel": false,
+          "secret_key": ""
+        }
+      }
+    },
+    "description": "The CloudFormation plugin can be used to create/update or delete stacks, and to validate templates.\nDocumentation is available here: https://plugins.drone.io/plugins/\nNOTE: Setting params is not included due to unsupported variable type\nNOTE: Setting batch is not included due to unsupported variable type",
+    "name": "AWS CloudFormation",
+    "type": "Step",
+    "tags": {
+      "amazon": "",
+      "deploy": "",
+      "aws": "",
+      "source": "drone",
+      "cloudformation": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "cloudformation",
+    "orgIdentifier": "my-org"
+  }
+}

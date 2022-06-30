@@ -1,0 +1,31 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "https://quay.io/honestbee/drone-kubernetes",
+        "connectorRef": "<+input>",
+        "settings": {
+          "kubernetes_server": "",
+          "repo": "",
+          "namespace": "",
+          "kubernetes_token": "",
+          "tag": ""
+        }
+      }
+    },
+    "description": "The Kubernetes plugin can be used to upgrade a Kubernetes deployment with a newer version of an image.\nDocumentation is available here: https://plugins.drone.io/plugins/\nNOTE: Setting container is not included due to unsupported variable type\nNOTE: Setting deployment is not included due to unsupported variable type",
+    "name": "Kubernetes Deployments",
+    "type": "Step",
+    "tags": {
+      "kubernetes": "",
+      "docker": "",
+      "deploy": "",
+      "source": "drone"
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "kubernetes",
+    "orgIdentifier": "my-org"
+  }
+}

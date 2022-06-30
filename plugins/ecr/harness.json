@@ -1,0 +1,45 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "plugins/ecr",
+        "connectorRef": "<+input>",
+        "settings": {
+          "region": "us-east-1",
+          "secret_key": "",
+          "force_tag": false,
+          "access_key": "",
+          "scan_on_push": false,
+          "bip": false,
+          "auth": "",
+          "insecure": false,
+          "dockerfile": "Dockerfile",
+          "repository_policy": "",
+          "context": "rot of the git repo",
+          "repo": "",
+          "storage_driver": "",
+          "mirror": "",
+          "custom_dns": "",
+          "lifecycle_policy": "",
+          "create_repository": false
+        }
+      }
+    },
+    "description": "The ECR plugin can be used to build and publish images to the Amazon ECR registry.\nDocumentation is available here: https://plugins.drone.io/plugins/\nNOTE: Setting tags is not included due to unsupported variable type\nNOTE: Setting build_args is not included due to unsupported variable type",
+    "name": "AWS ECR",
+    "type": "Step",
+    "tags": {
+      "source": "drone",
+      "docker": "",
+      "aws": "",
+      "ecr": "",
+      "publish": "",
+      "amazon": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "ecr",
+    "orgIdentifier": "my-org"
+  }
+}

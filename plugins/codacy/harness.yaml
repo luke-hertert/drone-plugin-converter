@@ -1,0 +1,22 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: plugins/codacy
+      connectorRef: <+input>
+      settings:
+        token: ""
+        pattern: '**/*.out'
+  description: |-
+    This plugin can upload coverage reports to Codacy, currently it's limited to Golang coverage reports.
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: Codacy
+  type: Step
+  tags:
+    coverage: ""
+    source: drone
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: codacy
+  orgIdentifier: my-org
+

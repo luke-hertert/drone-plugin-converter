@@ -1,0 +1,30 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: gboo/github-search-downstream
+      connectorRef: <+input>
+      settings:
+        wait: false
+        drone_server: ""
+        timeout: 60
+        github_token: ""
+        github_query: ""
+        drone_token: ""
+        ignore_missing: false
+  description: |-
+    Use this plugin to trigger builds for a list of downstream repositories fetched from a Github repository search. This is useful when updates to a repository have downstream impacts that should also be tested, and those repository are searchable on Github.
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: Github Search Downstream
+  type: Step
+  tags:
+    source: drone
+    github: ""
+    infrastructure: ""
+    trigger: ""
+    drone: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: github_search_downstream
+  orgIdentifier: my-org
+

@@ -1,0 +1,54 @@
+{
+  "id": "doumark",
+  "title": "Doumark",
+  "author": "lizheming",
+  "tags": [
+    "douban",
+    "notion",
+    "sync"
+  ],
+  "logo": "douban.svg",
+  "repo": "https://github.com/lizheming/drone-doumark",
+  "image": "https://hub.docker.com/r/lizheming/drone-doumark",
+  "license": "MIT License",
+  "readme": "https://github.com/lizheming/drone-doumark/blob/master/README.md",
+  "description": "Drone plugin for Douban(https://douban.com) movie/book/music marked data sync automatically.\n",
+  "example": "kind: pipeline\ntype: docker\nname: default\n\nclone:\n  disable: true\n\nsteps:\n- name: douban\n  image: lizheming/drone-doumark\n  settings:\n    id: lizheming\n    type: movie\n    format: notion\n    notion_token: xxxxxx\n    dir: xxxxxx\n",
+  "properties": {
+    "id": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "Douban ID",
+      "secret": false,
+      "required": true
+    },
+    "type": {
+      "type": "string",
+      "defaultValue": "movie",
+      "description": "Douban data Type, enum value: movie, book, music\n",
+      "secret": false,
+      "required": false
+    },
+    "format": {
+      "type": "string",
+      "defaultValue": "csv",
+      "description": "Douban data store format, enum value: csv, json, notion\n",
+      "secret": false,
+      "required": false
+    },
+    "dir": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "Target where douban data sync to. It's a file path for csv and json format, and a notion database id for notion format.",
+      "secret": false,
+      "required": true
+    },
+    "notion_token": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "Notion Integration Token",
+      "secret": true,
+      "required": false
+    }
+  }
+}

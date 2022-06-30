@@ -1,0 +1,29 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "lizheming/drone-deta",
+        "connectorRef": "<+input>",
+        "settings": {
+          "project": "default",
+          "project_dir": ".",
+          "access_token": "",
+          "name": ""
+        }
+      }
+    },
+    "description": "The Deta plugin deploy your build to deta.sh(https://deta.sh).\n\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "Deta",
+    "type": "Step",
+    "tags": {
+      "deploy": "",
+      "deta": "",
+      "source": "drone"
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "deta",
+    "orgIdentifier": "my-org"
+  }
+}

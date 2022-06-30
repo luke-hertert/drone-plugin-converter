@@ -1,0 +1,97 @@
+#!/usr/bin/env pwsh
+
+$ErrorActionPreference = "Stop"
+
+function Get-DronePlugins {
+    $allPlugins = Invoke-RestMethod -Uri 'https://plugins.drone.io/_next/data/JeMwPuYTby501s-Q-Ylwu/index.json'
+    $allPlugins.pageProps.allPluginsData
+}
+
+function ConvertTo-HarnessPlugin {
+    param (
+        [Parameter(Mandatory)]
+        [PSCustomObject]$dronePlugin,
+
+        [string]$organization = "default",
+        
+        [Parameter(Mandatory)]
+        [string]$project
+    )
+
+    $harnessPlugin = @{
+        template=@{
+            type = "Step"
+            identifier = $dronePlugin.id.replace("-", "_")
+            name = $($dronePlugin.title.replace("-", "_") -replace '[^a-zA-Z]', ' ')
+            versionLabel = "v1"
+            projectIdentifier  = $project
+            orgIdentifier = $organization
+            tags = @{
+                source = "drone"
+            }  
+            description = @"
+$($dronePlugin.description)
+Documentation is available here: https://plugins.drone.io/plugins/$($dronePlugin.identifier)
+"@
+            spec = @{
+                type = "Plugin"
+                spec = @{
+                    connectorRef = "<+input>"
+                    image = $dronePlugin.image.Replace("https://hub.docker.com/r/", "")
+                    settings = @{}
+                }
+            }
+
+        }
+    }
+
+    if ($harnessPlugin.template.spec.spec.image.EndsWith("/")) {
+        $harnessPlugin.template.spec.spec.image = $harnessPlugin.template.spec.spec.image.Substring(0, $harnessPlugin.template.spec.spec.image.Length - 1)
+    }
+
+    $dronePlugin.tags | ForEach-Object { 
+        $harnessPlugin.template.tags.Add($_, "")
+    } 
+
+    $dronePlugin.properties.psobject.properties | ForEach-Object {
+        $key = $_.Name
+        $setting = $_.Value
+        if ($setting.type -in @( "string", "boolean", "number" )) {
+            $harnessPlugin.template.spec.spec.settings.Add($key, $setting.defaultValue)
+        } else {
+            $harnessPlugin.template.description += "`nNOTE: Setting $key is not included due to unsupported variable type"
+        }
+    }
+
+    $harnessPlugin
+}
+
+function Import-DronePlugins {
+    param (
+        [string]$organization = "default",
+        
+        [Parameter(Mandatory)]
+        [string]$project
+    )
+
+    $dronePlugins = Get-DronePlugins
+
+    if (Test-Path ./plugins) {
+        Remove-Item -Recurse -Force ./plugins
+    }
+
+    $dronePlugins | ForEach-Object {
+        $dronePlugin = $_
+        New-Item ./plugins/$($dronePlugin.id) -ItemType Directory
+        Push-Location ./plugins/$($dronePlugin.id)
+        $dronePlugin | ConvertTo-Json -Depth 10 > drone.json
+        $dronePlugin | ConvertTo-Yaml > drone.yaml
+
+        $harnessPlugin = ConvertTo-HarnessPlugin -dronePlugin $dronePlugin -project $project -organization $organization
+        $harnessPlugin | ConvertTo-Json -Depth 10 > harness.json
+        $harnessPlugin | ConvertTo-Yaml > harness.yaml
+        Pop-Location
+    }
+}
+
+Import-DronePlugins -project $args[0] -organization $args[1]

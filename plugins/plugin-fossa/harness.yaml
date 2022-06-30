@@ -1,0 +1,24 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: rancher/drone-fossa
+      connectorRef: <+input>
+      settings:
+        debug: false
+        api_key: ""
+  description: |-
+    By default, this plugin will run the analyze command per the generic CI documentation for FOSSA.
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: fossa
+  type: Step
+  tags:
+    report: ""
+    fossa: ""
+    source: drone
+    Analysis: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: plugin_fossa
+  orgIdentifier: my-org
+

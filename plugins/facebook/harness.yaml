@@ -1,0 +1,30 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: appleboy/drone-facebook
+      connectorRef: <+input>
+      settings:
+        to: ""
+        app_secret: ""
+        fb_page_token: ""
+        fb_verify_token: ""
+        message: ""
+  description: |-
+    The Facebook plugin posts build status messages to your account.
+    Documentation is available here: https://plugins.drone.io/plugins/
+    NOTE: Setting images is not included due to unsupported variable type
+    NOTE: Setting videos is not included due to unsupported variable type
+    NOTE: Setting audios is not included due to unsupported variable type
+    NOTE: Setting files is not included due to unsupported variable type
+  name: Facebook
+  type: Step
+  tags:
+    chat: ""
+    source: drone
+    notifications: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: facebook
+  orgIdentifier: my-org
+

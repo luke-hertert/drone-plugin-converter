@@ -1,0 +1,33 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: appleboy/drone-packer
+      connectorRef: <+input>
+      settings:
+        readable: false
+        syntax_only: false
+        template: ""
+        debug: false
+        color: false
+        force: false
+        parallel: false
+  description: |-
+    This plugin can build automated machine images with Packer.
+    Documentation is available here: https://plugins.drone.io/plugins/
+    NOTE: Setting actions is not included due to unsupported variable type
+    NOTE: Setting vars is not included due to unsupported variable type
+    NOTE: Setting var_files is not included due to unsupported variable type
+    NOTE: Setting except is not included due to unsupported variable type
+    NOTE: Setting only is not included due to unsupported variable type
+  name: Packer
+  type: Step
+  tags:
+    source: drone
+    hashicorp: ""
+    packer: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: packer
+  orgIdentifier: my-org
+

@@ -1,0 +1,29 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "appleboy/drone-line",
+        "connectorRef": "<+input>",
+        "settings": {
+          "channel_token": "",
+          "message": "",
+          "to": "",
+          "channel_secret": ""
+        }
+      }
+    },
+    "description": "The Line plugin posts build status messages to your channel.\nDocumentation is available here: https://plugins.drone.io/plugins/\nNOTE: Setting images is not included due to unsupported variable type\nNOTE: Setting videos is not included due to unsupported variable type\nNOTE: Setting audios is not included due to unsupported variable type\nNOTE: Setting locations is not included due to unsupported variable type\nNOTE: Setting stickers is not included due to unsupported variable type",
+    "name": "Line",
+    "type": "Step",
+    "tags": {
+      "chat": "",
+      "source": "drone",
+      "notifications": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "line",
+    "orgIdentifier": "my-org"
+  }
+}

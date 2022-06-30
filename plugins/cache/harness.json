@@ -1,0 +1,43 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "meltwater/drone-cache",
+        "connectorRef": "<+input>",
+        "settings": {
+          "region": "",
+          "encryption": "none",
+          "rebuild": false,
+          "backend": "s3",
+          "secret-key": "",
+          "path-style": false,
+          "endpoint": "",
+          "archive-format": "tar",
+          "cache-key": "",
+          "debug": false,
+          "access-key": "",
+          "filesystem-cache-route": "/tmp/cache",
+          "bucket": "",
+          "restore": false,
+          "acl": "private"
+        }
+      }
+    },
+    "description": "A Drone plugin for caching current workspace files between builds to reduce your build times. `drone-cache` is a small CLI program, written in Go without any external OS dependencies (such as tar, etc).\nDocumentation is available here: https://plugins.drone.io/plugins/\nNOTE: Setting mount is not included due to unsupported variable type",
+    "name": "Drone Cache",
+    "type": "Step",
+    "tags": {
+      "source": "drone",
+      "aws": "",
+      "cache": "",
+      "s3": "",
+      "amazon": "",
+      "volume": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "cache",
+    "orgIdentifier": "my-org"
+  }
+}

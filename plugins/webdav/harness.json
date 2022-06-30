@@ -1,0 +1,29 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "vividboarder/drone-webdav",
+        "connectorRef": "<+input>",
+        "settings": {
+          "file": "",
+          "destination": "",
+          "password": "",
+          "username": ""
+        }
+      }
+    },
+    "description": "The WebDAV plugin will allow pushing build artifacts to any WebDAV server, including Nextcloud or ownCloud.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "WebDAV",
+    "type": "Step",
+    "tags": {
+      "deploy": "",
+      "source": "drone",
+      "publish": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "webdav",
+    "orgIdentifier": "my-org"
+  }
+}

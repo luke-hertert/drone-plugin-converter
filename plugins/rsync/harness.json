@@ -1,0 +1,34 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "drillster/drone-rsync",
+        "connectorRef": "<+input>",
+        "settings": {
+          "source": "./",
+          "delete": false,
+          "recursive": false,
+          "user": "root",
+          "key": "",
+          "target": "",
+          "port": 22,
+          "args": ""
+        }
+      }
+    },
+    "description": "The rsync plugin can be used to transfer files to remote machines, and run a user-defined script afterwards.\nDocumentation is available here: https://plugins.drone.io/plugins/\nNOTE: Setting hosts is not included due to unsupported variable type\nNOTE: Setting include is not included due to unsupported variable type\nNOTE: Setting exclude is not included due to unsupported variable type\nNOTE: Setting script is not included due to unsupported variable type\nNOTE: Setting prescript is not included due to unsupported variable type",
+    "name": "rsync",
+    "type": "Step",
+    "tags": {
+      "source": "drone",
+      "publish": "",
+      "ssh": "",
+      "rsync": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "rsync",
+    "orgIdentifier": "my-org"
+  }
+}

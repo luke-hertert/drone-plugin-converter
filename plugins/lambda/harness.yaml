@@ -1,0 +1,29 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: omerxx/drone-lambda-plugin
+      connectorRef: <+input>
+      settings:
+        file_name: ""
+        aws_secret_access_key: ""
+        function_name: ""
+        aws_access_key_id: ""
+        s3_bucket: ""
+        aws_default_region: ""
+  description: |-
+    The plugin automatically deployes a serverless function to AWS Lambda from a zip file located in an S3 bucket. This plugin does not handle creating or uploading the zip file.
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: AWS Lambda
+  type: Step
+  tags:
+    source: drone
+    aws: ""
+    deploy: ""
+    lambda: ""
+    amazon: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: lambda
+  orgIdentifier: my-org
+

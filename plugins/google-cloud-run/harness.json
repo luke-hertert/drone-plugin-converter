@@ -1,0 +1,35 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "https://quay.io/repository/kameshsampath/drone-gcloud-run",
+        "connectorRef": "<+input>",
+        "settings": {
+          "project": "",
+          "allow_unauthenticated": "",
+          "delete": "",
+          "region": "",
+          "service_account_json": "",
+          "image": "",
+          "service_name": ""
+        }
+      }
+    },
+    "description": "Plugin to build and manage Google Cloud Run services.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "Google Cloud Run",
+    "type": "Step",
+    "tags": {
+      "source": "drone",
+      "serverless": "",
+      "deploy": "",
+      "cloud": "",
+      "run": "",
+      "google": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "google_cloud_run",
+    "orgIdentifier": "my-org"
+  }
+}

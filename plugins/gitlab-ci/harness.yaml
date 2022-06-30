@@ -1,0 +1,28 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: appleboy/drone-gitlab-ci
+      connectorRef: <+input>
+      settings:
+        ref: ""
+        host: ""
+        token: ""
+        id: ""
+        debug: false
+  description: |-
+    The Gitlab-ci plugin allows you to trigger Gitlab-ci job automatically.
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: Gitlab CI
+  type: Step
+  tags:
+    source: drone
+    gitlab-ci: ""
+    infrastructure: ""
+    gitlab: ""
+    trigger: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: gitlab_ci
+  orgIdentifier: my-org
+

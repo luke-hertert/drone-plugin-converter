@@ -1,0 +1,81 @@
+{
+  "id": "line",
+  "title": "Line",
+  "author": "appleboy",
+  "tags": [
+    "notifications",
+    "chat"
+  ],
+  "logo": "line.svg",
+  "repo": "https://github.com/appleboy/drone-line",
+  "image": "https://hub.docker.com/r/appleboy/drone-line",
+  "license": "MIT License",
+  "readme": "https://github.com/appleboy/drone-line/blob/master/README.md",
+  "description": "The Line plugin posts build status messages to your channel.",
+  "example": "kind: pipeline\nname: default\nsteps:\n- name: line\n  image: appleboy/drone-line\n  settings:\n    channel_secret: xxxxxxxxxx\n    channel_token: xxxxxxxxxx\n    to: line_user_id\n    to_room: line_room_id\n    to_group: line_group_id\n",
+  "properties": {
+    "channel_secret": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "The channel secret",
+      "secret": true,
+      "required": true
+    },
+    "channel_token": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "The channel token",
+      "secret": true,
+      "required": true
+    },
+    "to": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "The user ID to send a message to",
+      "secret": false,
+      "required": false
+    },
+    "message": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "Overwrite the default message template.",
+      "secret": false,
+      "required": true
+    },
+    "images": {
+      "type": "array",
+      "defaultValue": [],
+      "description": "Valid image URLs",
+      "secret": false,
+      "required": false
+    },
+    "videos": {
+      "type": "array",
+      "defaultValue": [],
+      "description": "Valid video URLs",
+      "secret": false,
+      "required": false
+    },
+    "audios": {
+      "type": "array",
+      "defaultValue": [],
+      "description": "Valid audio URLs",
+      "secret": false,
+      "required": false
+    },
+    "locations": {
+      "type": "array",
+      "defaultValue": [],
+      "description": "Valid location lat/lng",
+      "secret": false,
+      "required": false
+    },
+    "stickers": {
+      "type": "array",
+      "defaultValue": [],
+      "description": "Valid stickers",
+      "secret": false,
+      "required": false
+    }
+  }
+}

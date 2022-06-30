@@ -1,0 +1,28 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: lizheming/drone-doumark
+      connectorRef: <+input>
+      settings:
+        dir: ""
+        notion_token: ""
+        type: movie
+        id: ""
+        format: csv
+  description: |-
+    Drone plugin for Douban(https://douban.com) movie/book/music marked data sync automatically.
+
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: Doumark
+  type: Step
+  tags:
+    notion: ""
+    sync: ""
+    douban: ""
+    source: drone
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: doumark
+  orgIdentifier: my-org
+

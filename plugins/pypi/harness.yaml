@@ -1,0 +1,28 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: plugins/pypi
+      connectorRef: <+input>
+      settings:
+        setupfile: setup.py
+        skip_build: false
+        password: ""
+        distributions: only sdist
+        repository: https://upload.pypi.org/legacy/
+        username: ""
+  description: |-
+    This plugin allows you to publish Python pypi packages as part of your pipeline.
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: PyPI
+  type: Step
+  tags:
+    python: ""
+    pypi: ""
+    source: drone
+    publish: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: pypi
+  orgIdentifier: my-org
+

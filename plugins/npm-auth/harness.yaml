@@ -1,0 +1,28 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: robertstettner/drone-npm-auth
+      connectorRef: <+input>
+      settings:
+        scope: ""
+        password: ""
+        registry: https://registry.npmjs.org
+        path: ./
+        username: ""
+        email: ""
+  description: |-
+    This plugin is used to generate an .npmrc file locally to authenticate against any public/private NPM repository.
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: NPM Auth
+  type: Step
+  tags:
+    npm: ""
+    node: ""
+    authentication: ""
+    source: drone
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: npm_auth
+  orgIdentifier: my-org
+

@@ -1,0 +1,34 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "plugins/slack",
+        "connectorRef": "<+input>",
+        "settings": {
+          "link_names": false,
+          "template": false,
+          "icon_url": false,
+          "image_url": false,
+          "channel": false,
+          "icon_emoji": false,
+          "recipient": false,
+          "username": false,
+          "webhook": false
+        }
+      }
+    },
+    "description": "The Slack plugin posts build status messages to your channel.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "Slack",
+    "type": "Step",
+    "tags": {
+      "chat": "",
+      "source": "drone",
+      "notifications": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "slack",
+    "orgIdentifier": "my-org"
+  }
+}

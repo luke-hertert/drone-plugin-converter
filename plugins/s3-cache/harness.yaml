@@ -1,0 +1,38 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: plugins/s3-cache
+      connectorRef: <+input>
+      settings:
+        filename: ""
+        rebuild: false
+        secret_key: ""
+        access_key: ""
+        endpoint: ""
+        root: /
+        flush_age: 30
+        flush: false
+        debug: false
+        path: '[root]/<owner>/<repo>/<branch>/'
+        flush_path: '[root]/<owner>/<repo>/'
+        restore: false
+        workdir: ""
+        fallback_path: '[root]/<owner>/<repo>/<branch>/'
+  description: |-
+    The S3 cache plugin can be used to preserve files and directories between builds.
+    Documentation is available here: https://plugins.drone.io/plugins/
+    NOTE: Setting mount is not included due to unsupported variable type
+  name: AWS S  Cache
+  type: Step
+  tags:
+    source: drone
+    aws: ""
+    cache: ""
+    s3: ""
+    amazon: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: s3_cache
+  orgIdentifier: my-org
+

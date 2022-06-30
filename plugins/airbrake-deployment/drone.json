@@ -1,0 +1,31 @@
+{
+  "id": "airbrake-deployment",
+  "title": "airbrake-deployment",
+  "author": "dhoeric",
+  "tags": [
+    "airbrake",
+    "deployment"
+  ],
+  "repo": "https://github.com/dhoeric/drone-airbrake-deployment",
+  "image": "https://hub.docker.com/r/dhoeric/drone-airbrake-deployment",
+  "license": "Apache License 2.0",
+  "readme": "https://github.com/dhoeric/drone-airbrake-deployment/blob/master/README.md",
+  "description": "Use the airbrake-deployment plugin to notify Airbrake of deployment in a certain environment.",
+  "example": "kind: pipeline\ntype: docker\nname: notify_airbrake\n\nsteps:\n- name: airbrake\n  image: dhoeric/drone-airbrake-deployment:latest\n  settings:\n    airbrake_environment: staging\n    secrets:\n    - airbrake_project_id\n    - airbrake_project_key\n",
+  "properties": {
+    "airbrake_environment": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "environment have been deployed in the drone build",
+      "secret": false,
+      "required": true
+    },
+    "secrets": {
+      "type": "array",
+      "defaultValue": "",
+      "description": "project ID of airbrake project & project API key of airbrake project",
+      "secret": true,
+      "required": true
+    }
+  }
+}

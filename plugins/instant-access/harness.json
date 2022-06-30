@@ -1,0 +1,29 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "erguotou/drone-instant-access",
+        "connectorRef": "<+input>",
+        "settings": {
+          "channel": "",
+          "body": "",
+          "head": ""
+        }
+      }
+    },
+    "description": "The InstantAccess plugin posts build status messages to your account.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "InstantAccess     ",
+    "type": "Step",
+    "tags": {
+      "即时达": "",
+      "InstantAccess": "",
+      "source": "drone",
+      "notifications": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "instant_access",
+    "orgIdentifier": "my-org"
+  }
+}

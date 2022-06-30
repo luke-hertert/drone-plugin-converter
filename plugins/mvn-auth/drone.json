@@ -1,0 +1,47 @@
+{
+  "id": "mvn-auth",
+  "title": "Maven Auth",
+  "author": "robertstettner",
+  "tags": [
+    "authentication",
+    "maven",
+    "mvn"
+  ],
+  "logo": "maven.svg",
+  "repo": "https://github.com/robertstettner/drone-mvn-auth",
+  "image": "https://hub.docker.com/r/robertstettner/drone-mvn-auth",
+  "license": "MIT License",
+  "readme": "https://github.com/robertstettner/drone-mvn-auth/blob/master/README.md",
+  "description": "The Maven Auth plugin can be used for generating the settings.xml with server authentication for a Maven repository. Please note that dependencies are saved in the .m2 directory.",
+  "example": "kind: pipeline\nname: default\n\nsteps:\n- name: auth\n  image: robertstettner/drone-mvn-auth\n  settings:\n    servers:\n    - id: release\n      username: admin\n      password: R31e4sE\n    - id: snapshot\n      username: snap\n      password: crackle123\n    profiles:\n      - id: my-profile\n        repositories:\n          - id: myRepo\n            name: Repository for my libraries\n            url: http://maven.my.com\n            layout: default\n        plugin_repositories:\n          - id: myRepo\n            name: Repository for my libraries\n            url: http://maven.my.com\n            layout: default\n    active_profiles:\n      - my-profile\n",
+  "properties": {
+    "servers": {
+      "type": "array",
+      "defaultValue": [],
+      "description": "The list of servers",
+      "secret": false,
+      "required": false
+    },
+    "profiles": {
+      "type": "array",
+      "defaultValue": [],
+      "description": "The list of profiles",
+      "secret": false,
+      "required": false
+    },
+    "active_profiles": {
+      "type": "array",
+      "defaultValue": [],
+      "description": "The list of active profiles",
+      "secret": false,
+      "required": false
+    },
+    "debug": {
+      "type": "boolean",
+      "defaultValue": false,
+      "description": "Enable debug mode",
+      "secret": false,
+      "required": false
+    }
+  }
+}

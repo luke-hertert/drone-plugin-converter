@@ -1,0 +1,26 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: amirbagh75/fandogh-drone
+      connectorRef: <+input>
+      settings:
+        manifest_path: ""
+        password: ""
+        registry: ""
+        version: ""
+        username: ""
+  description: |-
+    This plugin can help you to easy delivery your new docker images to fandogh PaaS.
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: Fandogh
+  type: Step
+  tags:
+    source: drone
+    paas: ""
+    fandogh: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: fandogh
+  orgIdentifier: my-org
+

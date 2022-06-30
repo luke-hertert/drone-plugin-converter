@@ -1,0 +1,33 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: cschlosser/drone-ftps
+      connectorRef: <+input>
+      settings:
+        include: ""
+        chmod: true
+        hostname: ""
+        secure: true
+        exclude: ""
+        clean_dir: false
+        verify: true
+        dest_dir: /
+        src_dir: ./
+  description: |-
+    The FTPS plugin can be used to publish artifacts over FTP(S).
+    Documentation is available here: https://plugins.drone.io/plugins/
+    NOTE: Setting secrets is not included due to unsupported variable type
+  name: 'FTP S '
+  type: Step
+  tags:
+    source: drone
+    ftps: ""
+    publish: ""
+    ftp: ""
+    ssh: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: ftps
+  orgIdentifier: my-org
+

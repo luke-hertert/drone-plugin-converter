@@ -1,0 +1,27 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: plugins/anynines
+      connectorRef: <+input>
+      settings:
+        skip_cleanup: false
+        space: ""
+        password: ""
+        username: ""
+        organization: ""
+  description: |-
+    This plugin deploys your application on the Anynines platform.
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: Anynines
+  type: Step
+  tags:
+    deploy: ""
+    source: drone
+    paas: ""
+    anynines: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: anynines
+  orgIdentifier: my-org
+

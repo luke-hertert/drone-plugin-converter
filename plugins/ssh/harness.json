@@ -1,0 +1,42 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "appleboy/drone-ssh",
+        "connectorRef": "<+input>",
+        "settings": {
+          "proxy_host": "",
+          "proxy_password": "",
+          "password": "",
+          "key": "",
+          "username": "",
+          "proxy_port": "",
+          "command_timeout": "10m",
+          "port": 22,
+          "script": "",
+          "host": "",
+          "proxy_username": "",
+          "proxy_key": "",
+          "proxy_key_path": "",
+          "script_stop": false,
+          "key_path": "",
+          "timeout": "30s"
+        }
+      }
+    },
+    "description": "Use the SSH plugin to execute commands on a remote server.\nDocumentation is available here: https://plugins.drone.io/plugins/\nNOTE: Setting envs is not included due to unsupported variable type",
+    "name": "SSH",
+    "type": "Step",
+    "tags": {
+      "deploy": "",
+      "source": "drone",
+      "ssh": "",
+      "publish": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "ssh",
+    "orgIdentifier": "my-org"
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "ibmclouddevops/drone-bluemix-cloudfoundry",
+        "connectorRef": "<+input>",
+        "settings": {
+          "space": "",
+          "domain": "",
+          "buildpack": "",
+          "docker_image": "",
+          "BLUEMIX_USER": "",
+          "name": "",
+          "health_check_type": "",
+          "no_start": false,
+          "hostname": "",
+          "BLUEMIX_API": "",
+          "no_route": false,
+          "manifest": "",
+          "path": "",
+          "BLUEMIX_ORG": "",
+          "timeout": "",
+          "password": "",
+          "instances": "",
+          "memory": "",
+          "org": "",
+          "random_route": false,
+          "route_path": "",
+          "api": "",
+          "user": "",
+          "no_hostname": false,
+          "BLUEMIX_SPACE": false,
+          "command": "",
+          "skip_ssl": false,
+          "stack": "",
+          "BLUEMIX_PASSWORD": "",
+          "disk": "",
+          "no_manifest": false
+        }
+      }
+    },
+    "description": "The Bluemix Cloud Foundry plugin can be used to deploy files and/or services to Bluemix.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "Bluemix Cloud Foundry",
+    "type": "Step",
+    "tags": {
+      "cloud foundry": "",
+      "deploy": "",
+      "bluemix": "",
+      "source": "drone",
+      "publish": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "bluemix_cloudfoundry",
+    "orgIdentifier": "my-org"
+  }
+}

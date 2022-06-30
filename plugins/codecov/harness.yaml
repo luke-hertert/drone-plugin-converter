@@ -1,0 +1,28 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: robertstettner/drone-codecov
+      connectorRef: <+input>
+      settings:
+        debug: false
+        token: ""
+  description: |-
+    This plugin allows for pushing test coverage results to Codecov.
+    Documentation is available here: https://plugins.drone.io/plugins/
+    NOTE: Setting files is not included due to unsupported variable type
+    NOTE: Setting flags is not included due to unsupported variable type
+  name: Codecov
+  type: Step
+  tags:
+    source: drone
+    test: ""
+    coverage: ""
+    codecov: ""
+    publish: ""
+    reporting: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: codecov
+  orgIdentifier: my-org
+

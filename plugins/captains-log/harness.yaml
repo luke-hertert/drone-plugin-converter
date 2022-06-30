@@ -1,0 +1,35 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: target/captains-log
+      connectorRef: <+input>
+      settings:
+        slack_channel: ""
+        github_repo: ""
+        github_tag_id: ""
+        jira_team_domain: ""
+        secrets: ""
+        enterprise_host: ""
+        github_owner: ""
+  description: |-
+    A Drone plugin that helps organize release information in Slack
+    Documentation is available here: https://plugins.drone.io/plugins/
+    NOTE: Setting teams is not included due to unsupported variable type
+  name: Captains Log
+  type: Step
+  tags:
+    source: drone
+    release notes: ""
+    build: ""
+    notes: ""
+    releases: ""
+    notifications: ""
+    chat: ""
+    logs: ""
+    slack: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: captains_log
+  orgIdentifier: my-org
+

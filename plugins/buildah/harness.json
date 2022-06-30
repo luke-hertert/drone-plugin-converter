@@ -1,0 +1,43 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "plugins/buildah-docker",
+        "connectorRef": "<+input>",
+        "settings": {
+          "link": "",
+          "tags_auto": "",
+          "tags_suffix": "",
+          "context": ".",
+          "dry-run": false,
+          "tags": "list",
+          "compress": false,
+          "squash": false,
+          "args-from-env": "",
+          "args": "",
+          "dockerfile": "Dockerfile",
+          "auto-label": false,
+          "target": "",
+          "label-schema": "",
+          "repo": "",
+          "pull-image": false,
+          "quiet": false
+        }
+      }
+    },
+    "description": "Drone plugin uses Buildah to build and publish Docker images to a container registry. It mimics the Docker plugin.\nDocumentation is available here: https://plugins.drone.io/plugins/\nNOTE: Setting custom-labels is not included due to unsupported variable type",
+    "name": "Drone Buildah",
+    "type": "Step",
+    "tags": {
+      "buildah": "",
+      "docker": "",
+      "amazon": "",
+      "source": "drone"
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "buildah",
+    "orgIdentifier": "my-org"
+  }
+}

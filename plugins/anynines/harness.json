@@ -1,0 +1,31 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "plugins/anynines",
+        "connectorRef": "<+input>",
+        "settings": {
+          "space": "",
+          "username": "",
+          "organization": "",
+          "password": "",
+          "skip_cleanup": false
+        }
+      }
+    },
+    "description": "This plugin deploys your application on the Anynines platform.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "Anynines",
+    "type": "Step",
+    "tags": {
+      "deploy": "",
+      "source": "drone",
+      "paas": "",
+      "anynines": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "anynines",
+    "orgIdentifier": "my-org"
+  }
+}

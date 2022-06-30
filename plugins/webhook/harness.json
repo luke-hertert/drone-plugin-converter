@@ -1,0 +1,34 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "plugins/webhook",
+        "connectorRef": "<+input>",
+        "settings": {
+          "urls": "",
+          "method": "POST",
+          "content_type": "application/json",
+          "debug": false,
+          "password": "",
+          "skip_verify": false,
+          "template": "",
+          "username": ""
+        }
+      }
+    },
+    "description": "Use the Webhook plugin to notify services via Webhook when a build completes. You will need to supply Drone with outgoing Webhook URLs.\nDocumentation is available here: https://plugins.drone.io/plugins/\nNOTE: Setting headers is not included due to unsupported variable type",
+    "name": "Webhook",
+    "type": "Step",
+    "tags": {
+      "trigger": "",
+      "webhook": "",
+      "source": "drone",
+      "notifications": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "webhook",
+    "orgIdentifier": "my-org"
+  }
+}

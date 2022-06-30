@@ -1,0 +1,28 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: plugins/acr
+      connectorRef: <+input>
+      settings:
+        service_principal_client_id: ""
+        repo: ""
+        service_principal_client_secret: ""
+        registry: azurecr.io
+  description: |-
+    The ACR plugin can be used to build and publish images to the Azure ECR
+    registry.
+
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: Azure container Registry
+  type: Step
+  tags:
+    docker: ""
+    azure: ""
+    source: drone
+    publish: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: acr
+  orgIdentifier: my-org
+

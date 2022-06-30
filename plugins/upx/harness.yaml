@@ -1,0 +1,23 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: cnbattle/drone-upx
+      connectorRef: <+input>
+      settings:
+        original_file: ""
+        save_file: ""
+        level: 5
+  description: |-
+    The UPX plugin can be used to pack executables.
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: UPX
+  type: Step
+  tags:
+    source: drone
+    upx: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: upx
+  orgIdentifier: my-org
+

@@ -1,0 +1,25 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: vallard/drone-kube
+      connectorRef: <+input>
+      settings:
+        template: ""
+        namespace: ""
+        server: ""
+  description: |-
+    Drone kubernetes plugin.
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: Drone Kube
+  type: Step
+  tags:
+    kubernetes: ""
+    docker: ""
+    deploy: ""
+    source: drone
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: kube
+  orgIdentifier: my-org
+

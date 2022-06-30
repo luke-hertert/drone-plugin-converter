@@ -1,0 +1,27 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "robertstettner/drone-mvn-auth",
+        "connectorRef": "<+input>",
+        "settings": {
+          "debug": false
+        }
+      }
+    },
+    "description": "The Maven Auth plugin can be used for generating the settings.xml with server authentication for a Maven repository. Please note that dependencies are saved in the .m2 directory.\nDocumentation is available here: https://plugins.drone.io/plugins/\nNOTE: Setting servers is not included due to unsupported variable type\nNOTE: Setting profiles is not included due to unsupported variable type\nNOTE: Setting active_profiles is not included due to unsupported variable type",
+    "name": "Maven Auth",
+    "type": "Step",
+    "tags": {
+      "mvn": "",
+      "authentication": "",
+      "source": "drone",
+      "maven": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "mvn_auth",
+    "orgIdentifier": "my-org"
+  }
+}

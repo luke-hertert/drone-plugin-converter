@@ -1,0 +1,53 @@
+{
+  "id": "nomad",
+  "title": "Nomad",
+  "author": "loq9",
+  "tags": [
+    "nomad",
+    "orchestration"
+  ],
+  "logo": "nomad.svg",
+  "repo": "https://github.com/loq9/drone-nomad",
+  "image": "https://hub.docker.com/r/loq9/drone-nomad",
+  "license": "Apache License 2.0",
+  "readme": "https://github.com/LOQ9/drone-nomad/blob/master/README.md",
+  "description": "Use the Nomad plugin to deploy services from a template. You will need to supply Drone with the nomad template file.",
+  "example": "kind: pipeline\nname: default\n\nsteps:\n- name: deploy\n  image: loq9/drone-nomad\n  settings:\n    addr: https://your.nomad.server/...\n    template: nomad-template.hcl\n",
+  "properties": {
+    "addr": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "The Nomad server address",
+      "secret": false,
+      "required": true
+    },
+    "template": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "Template for Nomad",
+      "secret": false,
+      "required": true
+    },
+    "region": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "Nomad region",
+      "secret": false,
+      "required": false
+    },
+    "namespace": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "Nomad namespace",
+      "secret": false,
+      "required": false
+    },
+    "token": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "Nomad token",
+      "secret": true,
+      "required": false
+    }
+  }
+}

@@ -1,0 +1,30 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: appleboy/drone-sftp-cache
+      connectorRef: <+input>
+      settings:
+        ignore_branch: ""
+        rebuild: ""
+        username: ""
+        restoe: ""
+        password: ""
+        key: ""
+        port: ""
+        server: ""
+  description: |-
+    Use this plugin for caching build artifacts to speed up your build times. This plugin can create and restore caches of any folders.
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: SFTP Cache
+  type: Step
+  tags:
+    cache: ""
+    sftp: ""
+    source: drone
+    ssh: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: sftp_cache
+  orgIdentifier: my-org
+

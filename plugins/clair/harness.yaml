@@ -1,0 +1,25 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: jmccann/drone-clair
+      connectorRef: <+input>
+      settings:
+        username: ""
+        scan_image: ""
+        url: ""
+        password: ""
+  description: |-
+    The Clair plugin submits your docker image to your Clair server to scan your docker image for security vulnerabilities.
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: Clair
+  type: Step
+  tags:
+    docker: ""
+    source: drone
+    security: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: clair
+  orgIdentifier: my-org
+

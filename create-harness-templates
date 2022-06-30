@@ -1,0 +1,89 @@
+#!/usr/bin/env pwsh
+
+$ErrorActionPreference = "Stop"
+
+function Create-HarnessPlugin {
+    param (
+        [Parameter(Mandatory)]
+        [string]$accountId,
+
+        [string]$organization = "default",
+        
+        [Parameter(Mandatory)]
+        [string]$project,
+
+        [Parameter(Mandatory)]
+        [string]$pluginName,
+
+        [Parameter(Mandatory)]
+        [string]$bearerToken
+    )
+
+    $template = Get-Content ./plugins/$pluginName/harness.yaml
+    $parsedTemplate = $template | ConvertFrom-Yaml
+    $parsedTemplate.template.orgIdentifier = $org
+    $parsedTemplate.template.projectIdentifier = $project
+    $template = $parsedTemplate | ConvertTo-Yaml
+
+
+    $response = Invoke-WebRequest -UseBasicParsing -Uri "https://app.harness.io/gateway/template/api/templates?accountIdentifier=$accountId&projectIdentifier=$project&orgIdentifier=$org&comments=" `
+        -Method "POST" `
+        -Headers @{
+            "accept"="*/*"
+            "authorization"="Bearer $bearerToken"
+        } `
+        -ContentType "application/yaml" `
+        -Body $template
+
+    $response.Content
+}
+
+function Login {
+    $username = Read-Host "Pleast enter your Harness username"
+    $password = Read-Host -assecurestring "Please enter your Harness password"
+    $password = ConvertFrom-SecureString -SecureString $password -AsPlainText  
+    $base64Encoded = [Convert]::ToBase64String([System.Text.Encoding]::UTF8.GetBytes("$($username):$($password)"))
+
+    $accountInfo = Invoke-RestMethod -Uri "https://app.harness.io/gateway/api/users/login?" `
+        -Method "POST" `
+        -ContentType "application/json" `
+        -Body "{`"authorization`":`"Basic $base64Encoded`"}"
+    $bearerToken = $accountInfo.resource.token
+
+    $auth = @{
+        username = $username
+        password = $password
+        bearerToken = $bearerToken
+    }
+
+    New-Item ~/.harness/ -ItemType Directory -ErrorAction Ignore
+    rm -rf ~/.harness/auth.json
+    Set-Content -Path ~/.harness/auth.json -Value $($auth | ConvertTo-Json)
+}
+
+if ($(Test-Path ~/.harness/auth.json) -eq $false) {
+    Login
+}
+$authData = Get-Content ~/.harness/auth.json | ConvertFrom-Json
+$bearerToken = $authData.bearerToken
+
+$accountId = $args[0]
+$project = $args[1]
+$org = $args[2]
+
+Get-ChildItem ./plugins | %{
+    $folder = $_.FullName
+    $plugin = $_.BaseName
+
+    try {
+        $response = Create-HarnessPlugin -accountId $accountId -organization $org -project $project -bearerToken $bearerToken -pluginName $plugin
+        Write-Host "Successfully created template $plugin"
+    } catch {
+        if ($_.ErrorDetails.Message.Contains("already exists")) {
+            Write-Host "Plugin $plugin already exists... skipping"
+        } else {
+            Write-Host "Error creating $plugin"
+            $_
+        }
+    }
+}

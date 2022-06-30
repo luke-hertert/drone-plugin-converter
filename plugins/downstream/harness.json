@@ -1,0 +1,33 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "plugins/downstream",
+        "connectorRef": "<+input>",
+        "settings": {
+          "wait": false,
+          "fork": false,
+          "timeout": 60,
+          "token": "",
+          "deploy": "",
+          "last_successful": false,
+          "server": ""
+        }
+      }
+    },
+    "description": "Use this plugin to trigger builds for a list of downstream repositories. This\nDocumentation is available here: https://plugins.drone.io/plugins/\nNOTE: Setting repositories is not included due to unsupported variable type\nNOTE: Setting params is not included due to unsupported variable type",
+    "name": "Downstream Build",
+    "type": "Step",
+    "tags": {
+      "drone": "",
+      "trigger": "",
+      "infrastructure": "",
+      "source": "drone"
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "downstream",
+    "orgIdentifier": "my-org"
+  }
+}

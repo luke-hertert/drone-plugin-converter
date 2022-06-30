@@ -1,0 +1,35 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "plugins/github-release",
+        "connectorRef": "<+input>",
+        "settings": {
+          "file_exists": "overwrite",
+          "api_key": "",
+          "checksum": "",
+          "prerelease": false,
+          "upload_url": "",
+          "title": "",
+          "note": "",
+          "draft": false,
+          "overwrite": false,
+          "base_url": ""
+        }
+      }
+    },
+    "description": "The github-release plugin is used to publish files and artifacts to GitHub Release.\nDocumentation is available here: https://plugins.drone.io/plugins/\nNOTE: Setting files is not included due to unsupported variable type",
+    "name": "Github Release",
+    "type": "Step",
+    "tags": {
+      "source": "drone",
+      "publish": "",
+      "github": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "github_release",
+    "orgIdentifier": "my-org"
+  }
+}

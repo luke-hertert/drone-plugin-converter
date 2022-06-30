@@ -1,0 +1,37 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "plugins/manifest",
+        "connectorRef": "<+input>",
+        "settings": {
+          "spec": "",
+          "auto_tag": false,
+          "insecure": false,
+          "template": "",
+          "tag": "",
+          "password": "Anonymous access",
+          "target": "",
+          "default_tags": false,
+          "username": "Anonymous access",
+          "ignore_missing": false
+        }
+      }
+    },
+    "description": "This plugin can push manifests for multi-arch Docker images.\nDocumentation is available here: https://plugins.drone.io/plugins/\nNOTE: Setting platforms is not included due to unsupported variable type\nNOTE: Setting tags is not included due to unsupported variable type",
+    "name": "Manifest",
+    "type": "Step",
+    "tags": {
+      "manifest": "",
+      "docker": "",
+      "source": "drone",
+      "architecture": "",
+      "tag": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "manifest",
+    "orgIdentifier": "my-org"
+  }
+}

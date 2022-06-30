@@ -1,0 +1,34 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: pelotech/drone-elastic-beanstalk
+      connectorRef: <+input>
+      settings:
+        bucket_key: ""
+        bucket_name: ""
+        environment_update: false
+        process: false
+        version_label: ""
+        region: ""
+        auto_create: false
+        access_key: ""
+        description: ""
+        environment_name: ""
+        secret_key: ""
+  description: |-
+    The Elastic Beanstalk plugin can be used to deploy an app to a Beanstalk environment.
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: AWS Elastic Beanstalk
+  type: Step
+  tags:
+    source: drone
+    aws: ""
+    deploy: ""
+    elastic beanstalk: ""
+    amazon: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: elastic_beanstalk
+  orgIdentifier: my-org
+

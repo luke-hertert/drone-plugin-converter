@@ -1,0 +1,35 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "wyattjoh/drone-gcs",
+        "connectorRef": "<+input>",
+        "settings": {
+          "source": "",
+          "exclude": "",
+          "bucket": "",
+          "strip_prefix": false,
+          "target": "",
+          "compress": false,
+          "acl": ""
+        }
+      }
+    },
+    "description": "The Google Cloud Storage plugin uploads files and build artifacts to your Google Cloud Storage bucket.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "Google Cloud Storage",
+    "type": "Step",
+    "tags": {
+      "source": "drone",
+      "gcp": "",
+      "gcs": "",
+      "storage": "",
+      "publish": "",
+      "google": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "gcs_2",
+    "orgIdentifier": "my-org"
+  }
+}

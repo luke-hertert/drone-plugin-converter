@@ -1,0 +1,30 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "pelotech/drone-google-chat",
+        "connectorRef": "<+input>",
+        "settings": {
+          "template": "",
+          "webhook": "",
+          "key": "",
+          "token": "",
+          "conversation_key": ""
+        }
+      }
+    },
+    "description": "The Google chat plugin posts build status messages to your company google chat.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "Google Chat",
+    "type": "Step",
+    "tags": {
+      "chat": "",
+      "source": "drone",
+      "notifications": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "google_chat",
+    "orgIdentifier": "my-org"
+  }
+}

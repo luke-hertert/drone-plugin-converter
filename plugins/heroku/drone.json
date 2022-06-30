@@ -1,0 +1,54 @@
+{
+  "id": "heroku",
+  "title": "Heroku",
+  "author": "drone-plugins",
+  "tags": [
+    "publish",
+    "docker",
+    "heroku"
+  ],
+  "logo": "heroku.svg",
+  "repo": "https://github.com/drone-plugins/drone-docker",
+  "image": "https://hub.docker.com/r/plugins/heroku",
+  "license": "None",
+  "readme": "https://github.com/drone-plugins/drone-docker/blob/master/README.md",
+  "description": "The heroku plugin can be used to build and publish images to the Heroku container registry.",
+  "example": "kind: pipeline\nname: default\n\nsteps:\n- name: docker  \n  image: plugins/docker\n  settings:\n    email: foo@bar.com\n    api_key: foobar\n    app: foo\n    process_type: bar\n",
+  "properties": {
+    "registry": {
+      "type": "string",
+      "defaultValue": "registry.heroku.com",
+      "description": "authenticates to this registry",
+      "secret": false,
+      "required": false
+    },
+    "process_type": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "process type",
+      "secret": false,
+      "required": true
+    },
+    "app": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "app name",
+      "secret": false,
+      "required": true
+    },
+    "email": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "auth email",
+      "secret": false,
+      "required": true
+    },
+    "api_key": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "heroku api key",
+      "secret": true,
+      "required": true
+    }
+  }
+}

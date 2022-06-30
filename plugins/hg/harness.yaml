@@ -1,0 +1,22 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: plugins/hg
+      connectorRef: <+input>
+      settings: {}
+  description: |-
+    The mercurial plugin is used to clone a mercurial repository.
+    Documentation is available here: https://plugins.drone.io/plugins/
+    NOTE: Setting  is not included due to unsupported variable type
+  name: Mercurial
+  type: Step
+  tags:
+    clone: ""
+    hg: ""
+    source: drone
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: hg
+  orgIdentifier: my-org
+

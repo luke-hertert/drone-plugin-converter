@@ -1,0 +1,35 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "jetrails/drone-cloudflare-dns",
+        "connectorRef": "<+input>",
+        "settings": {
+          "zone_identifier": "",
+          "action": "",
+          "record_priority": 1,
+          "api_token": "",
+          "record_name": "",
+          "record_content": "",
+          "record_ttl": 1,
+          "debug": false,
+          "record_type": "",
+          "record_proxied": true
+        }
+      }
+    },
+    "description": "Our Drone plugin enables the ability for your pipeline to interface with Cloudflare's API to create/update/delete DNS records.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "Cloudflare DNS",
+    "type": "Step",
+    "tags": {
+      "dns": "",
+      "source": "drone",
+      "cloudflare": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "cloudflare_dns",
+    "orgIdentifier": "my-org"
+  }
+}

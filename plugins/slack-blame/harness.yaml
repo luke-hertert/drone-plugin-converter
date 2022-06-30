@@ -1,0 +1,32 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: plugins/slack-blame
+      connectorRef: <+input>
+      settings:
+        failure_template: ""
+        success_template: ""
+        token: ""
+        success_icon: ""
+        failure_icon: ""
+        channel: ""
+        failure_username: ""
+        success_username: ""
+  description: |-
+    Use the Slack Blame plugin to send a message to a Slack channel or through direct message when a build completes. You will need to supply Drone with an access token to the Slack API. You can create a new access token at [https://api.slack.com/web](https://api.slack.com/web).
+    Documentation is available here: https://plugins.drone.io/plugins/
+    NOTE: Setting mapping is not included due to unsupported variable type
+    NOTE: Setting success_image_attachments is not included due to unsupported variable type
+    NOTE: Setting failure_image_attachments is not included due to unsupported variable type
+  name: Slack Blame
+  type: Step
+  tags:
+    chat: ""
+    source: drone
+    notifications: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: slack_blame
+  orgIdentifier: my-org
+

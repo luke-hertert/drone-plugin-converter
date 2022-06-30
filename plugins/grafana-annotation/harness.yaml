@@ -1,0 +1,26 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: fdeschenes/drone-grafana-annotation
+      connectorRef: <+input>
+      settings:
+        text: ""
+        api_key: ""
+        url: ""
+  description: |-
+    The Grafana Annotation plugin can be used to create an annotation in [Grafana](https://grafana.com).
+    Documentation is available here: https://plugins.drone.io/plugins/
+    NOTE: Setting tags is not included due to unsupported variable type
+  name: Grafana Annotation
+  type: Step
+  tags:
+    grafana: ""
+    deploy: ""
+    source: drone
+    reporting: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: grafana_annotation
+  orgIdentifier: my-org
+

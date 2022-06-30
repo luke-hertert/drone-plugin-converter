@@ -1,0 +1,22 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: cityfurniture/drone-newrelic-deployment
+      connectorRef: <+input>
+      settings:
+        api_key: ""
+        app_name: ""
+  description: |-
+    The Newrelic deployment plugin reports/logs your deployment to your dashboard to make it easy to track changes.
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: Newrelic Deployment
+  type: Step
+  tags:
+    newrelic: ""
+    source: drone
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: newrelic_deployment
+  orgIdentifier: my-org
+

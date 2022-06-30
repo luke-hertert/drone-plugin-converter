@@ -1,0 +1,27 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "algernon/drone-plugin-dco",
+        "connectorRef": "<+input>",
+        "settings": {
+          "debug": false
+        }
+      }
+    },
+    "description": "The DCO plugin enforces the Developer Certificate of Origin.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "DCO",
+    "type": "Step",
+    "tags": {
+      "report": "",
+      "test": "",
+      "source": "drone",
+      "analysis": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "dco",
+    "orgIdentifier": "my-org"
+  }
+}

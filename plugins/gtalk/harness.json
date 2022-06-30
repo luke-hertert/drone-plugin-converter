@@ -1,0 +1,30 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "appleboy/drone-gtalk",
+        "connectorRef": "<+input>",
+        "settings": {
+          "google_host": "talk.google.com:443",
+          "google_password": "",
+          "to": "",
+          "google_username": "",
+          "message": ""
+        }
+      }
+    },
+    "description": "The GTalk plugin posts build status messages to your google account.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "GTalk",
+    "type": "Step",
+    "tags": {
+      "chat": "",
+      "source": "drone",
+      "notifications": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "gtalk",
+    "orgIdentifier": "my-org"
+  }
+}

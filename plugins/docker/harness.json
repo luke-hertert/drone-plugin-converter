@@ -1,0 +1,63 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "plugins/docker",
+        "connectorRef": "<+input>",
+        "settings": {
+          "purge": false,
+          "registry": "",
+          "add_host": "",
+          "custom_dns": "",
+          "secret": "",
+          "password": "",
+          "squash": false,
+          "username": "",
+          "insecure": false,
+          "debug": false,
+          "force_tag": false,
+          "pull_image": false,
+          "email": "",
+          "cache_from": "",
+          "dry_run": "",
+          "build_args_from_env": "",
+          "no_cache": "",
+          "compress": false,
+          "dockerfile": "Dockerfile",
+          "experimental": false,
+          "custom_labels": "",
+          "storage_driver": "",
+          "custom_dns_search": "",
+          "auto_tag": false,
+          "target": "",
+          "mtu": "",
+          "build_args": "",
+          "launch_debug": false,
+          "auto_tag_suffix": "",
+          "storage_path": "",
+          "repo": "",
+          "bip": false,
+          "label_schema": "",
+          "mirror": "",
+          "daemon_off": false,
+          "context": "",
+          "ipv6": "",
+          "tags": ""
+        }
+      }
+    },
+    "description": "The Docker plugin can be used to build and publish images to the Docker\nregistry.\n\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "Docker",
+    "type": "Step",
+    "tags": {
+      "docker": "",
+      "source": "drone",
+      "publish": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "docker",
+    "orgIdentifier": "my-org"
+  }
+}

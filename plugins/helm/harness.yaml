@@ -1,0 +1,32 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: ipedrazas/drone-helm
+      connectorRef: <+input>
+      settings:
+        tiller_ns: kube-system
+        values: ""
+        prefix: ""
+        release: If you don't specify the release, helm will generate a random name and you will not be able to upgrade that release.
+        debug: false
+        chart: ""
+        api_server: ""
+        kubernetes_token: ""
+        namespace: default
+        skip_tls_verify: false
+  description: |-
+    This plugin allows you to run Kubernetes Helm as part of your pipeline.
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: Helm
+  type: Step
+  tags:
+    kubernetes: ""
+    docker: ""
+    helm: ""
+    source: drone
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: helm
+  orgIdentifier: my-org
+

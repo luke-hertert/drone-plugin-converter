@@ -1,0 +1,23 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: drillster/drone-volume-cache
+      connectorRef: <+input>
+      settings:
+        restore: false
+        rebuild: false
+  description: |-
+    The volume cache plugin can be used to preserve files and directories between builds.
+    Documentation is available here: https://plugins.drone.io/plugins/
+    NOTE: Setting mount is not included due to unsupported variable type
+  name: Volume Cache
+  type: Step
+  tags:
+    cache: ""
+    source: drone
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: volume_cache
+  orgIdentifier: my-org
+

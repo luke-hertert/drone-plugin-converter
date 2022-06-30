@@ -1,0 +1,33 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "plugins/matrix",
+        "connectorRef": "<+input>",
+        "settings": {
+          "template": "",
+          "userid": "",
+          "homeserver": "https://matrix.org",
+          "password": "",
+          "accesstoken": "",
+          "roomid": "",
+          "username": ""
+        }
+      }
+    },
+    "description": "This plugin can be used to send build success or failure messages to a Matrix room.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "Matrix",
+    "type": "Step",
+    "tags": {
+      "chat": "",
+      "source": "drone",
+      "notifications": "",
+      "matrix": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "matrix",
+    "orgIdentifier": "my-org"
+  }
+}

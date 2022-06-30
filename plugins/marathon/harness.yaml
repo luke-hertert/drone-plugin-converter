@@ -1,0 +1,25 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: e20co/drone-marathon
+      connectorRef: <+input>
+      settings:
+        trigger_restart: false
+        server: http://marathon.mesos:8080
+        marathonfile: marathon.json
+  description: |-
+    This plugin can be used to deploy applications to a Marathon server.
+    Documentation is available here: https://plugins.drone.io/plugins/
+    NOTE: Setting values is not included due to unsupported variable type
+  name: Marathon
+  type: Step
+  tags:
+    deploy: ""
+    source: drone
+    marathon: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: marathon
+  orgIdentifier: my-org
+

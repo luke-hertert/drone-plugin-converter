@@ -1,0 +1,28 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: plugins/gcr
+      connectorRef: <+input>
+      settings:
+        json_key: ""
+        repo: ""
+        registry: gcr.io
+  description: |-
+    The GCR plugin can be used to build and publish images to the Google Container Registry.
+
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: Google Container Registry
+  type: Step
+  tags:
+    source: drone
+    docker: ""
+    gcp: ""
+    gcr: ""
+    publish: ""
+    google: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: gcr
+  orgIdentifier: my-org
+

@@ -1,0 +1,33 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: knovus/drone-openfaas
+      connectorRef: <+input>
+      settings:
+        username: ""
+        deploy: false
+        tag: set latest
+        password: ""
+        tls_no_verify: false
+        registry: ""
+        url: ""
+        template: ""
+        image_name: reads the parameter from yaml file
+        yaml: reads stack.yml file
+  description: |-
+    This plugin can be used to build (generate Dockerfile and stuff) and Deploy functions to the OpenFaaS Gateway, and for the Docker image build & publish step, you can use the plugin for Kaniko or you favorite plugin.
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: OpenFaaS
+  type: Step
+  tags:
+    source: drone
+    serverless: ""
+    functions: ""
+    openfaas: ""
+    publish: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: openfaas
+  orgIdentifier: my-org
+

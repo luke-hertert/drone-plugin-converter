@@ -1,0 +1,32 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "plugins/npm",
+        "connectorRef": "<+input>",
+        "settings": {
+          "token": "",
+          "password": "",
+          "registry": "https://registry.npmjs.org",
+          "folder": "the workspace directory",
+          "username": "",
+          "email": ""
+        }
+      }
+    },
+    "description": "The NPM plugin can be used to publish libraries to public or private registries.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "NPM",
+    "type": "Step",
+    "tags": {
+      "npm": "",
+      "node": "",
+      "source": "drone",
+      "publish": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "npm",
+    "orgIdentifier": "my-org"
+  }
+}

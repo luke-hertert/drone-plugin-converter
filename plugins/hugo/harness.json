@@ -1,0 +1,38 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "plugins/hugo",
+        "connectorRef": "<+input>",
+        "settings": {
+          "source": "",
+          "buildExpired": false,
+          "url": "",
+          "validate": false,
+          "buildDrafts": false,
+          "content": "",
+          "output": "",
+          "config": "path/config.yaml|json|toml",
+          "layout": "",
+          "theme": "",
+          "buildFuture": false
+        }
+      }
+    },
+    "description": "The Hugo plugin automatically generates static web page files, which can be published afterwards!\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "Hugo",
+    "type": "Step",
+    "tags": {
+      "static": "",
+      "hugo": "",
+      "source": "drone",
+      "tool": "",
+      "generation": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "hugo",
+    "orgIdentifier": "my-org"
+  }
+}

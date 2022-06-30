@@ -1,0 +1,55 @@
+{
+  "id": "gcf",
+  "title": "Google Cloud Functions",
+  "author": "oliver006",
+  "tags": [
+    "publish",
+    "google",
+    "gcp",
+    "gcf"
+  ],
+  "logo": "google_gcf.svg",
+  "repo": "https://github.com/oliver006/drone-gcf",
+  "image": "https://hub.docker.com/r/oliver006/drone-gcf",
+  "license": "None",
+  "readme": "https://github.com/oliver006/drone-gcf/blob/master/README.md",
+  "description": "The GCF plugin can be used to deploy, list, and delete Google Cloud Functions.",
+  "example": "kind: pipeline\nname: default\n\nsteps:\n- name: deploy-cloud-functions\n  image: oliver006/drone-gcf\n  settings:\n    action: deploy\n    project: myproject\n    runtime: go111\n    functions:\n      - TransferFileToGCS:\n        - trigger: http\n          memory: 2048MB\n      - HandleEvents:\n        - trigger: topic\n          trigger_resource: \"projects/myproject/topics/mytopic\"\n          memory: 512MB\n          runtime: python37\n          source: ./python/src/functions/\n",
+  "properties": {
+    "token": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "json credentials of the service account to access Google Cloud Functions.",
+      "secret": true,
+      "required": false
+    },
+    "action": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "can be either deploy, delete, or list.",
+      "secret": false,
+      "required": false
+    },
+    "project": {
+      "type": "string",
+      "defaultValue": "the project of the service account",
+      "description": "name of the GCP project.",
+      "secret": false,
+      "required": false
+    },
+    "runtime": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "runtime of the functions to be deployed. Can be specified once or one a per function basis.",
+      "secret": false,
+      "required": false
+    },
+    "functions": {
+      "type": "array",
+      "defaultValue": [],
+      "description": "list of functions to be deployed, each needs to at least provide a trigger but can also set memory, runtime, and source.",
+      "secret": false,
+      "required": false
+    }
+  }
+}

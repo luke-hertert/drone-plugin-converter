@@ -1,0 +1,31 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "mike1pol/drone-rocket",
+        "connectorRef": "<+input>",
+        "settings": {
+          "user_id": "",
+          "avatar_url": "",
+          "token": "",
+          "channel": "",
+          "url": "",
+          "message": ""
+        }
+      }
+    },
+    "description": "Drone plugin for sending message to Rocket.Chant channel using API.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "Rocket Chat",
+    "type": "Step",
+    "tags": {
+      "chat": "",
+      "source": "drone",
+      "notifications": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "rocket",
+    "orgIdentifier": "my-org"
+  }
+}

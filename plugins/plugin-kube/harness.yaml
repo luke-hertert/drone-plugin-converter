@@ -1,0 +1,28 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: danielgormly/drone-plugin-kube
+      connectorRef: <+input>
+      settings:
+        Other_parameters: ""
+        template: ""
+        ca: ""
+        kubernetes_token: ""
+        configmap_file: ""
+        server: ""
+  description: |-
+    Updates Kubernetes deployments from templates & configMaps from files. This plugin will either create or update existing resources dependent on their presence. It will wait for deployments before it progresses.
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: Kubernetes
+  type: Step
+  tags:
+    kubernetes: ""
+    deployment: ""
+    configmap: ""
+    source: drone
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: plugin_kube
+  orgIdentifier: my-org
+

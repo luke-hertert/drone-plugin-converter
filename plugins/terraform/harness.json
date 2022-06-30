@@ -1,0 +1,32 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "jmccann/drone-terraform",
+        "connectorRef": "<+input>",
+        "settings": {
+          "ca_cert": "",
+          "sensitive": false,
+          "root_dir": "",
+          "role_arn_to_assume": "",
+          "plan": false,
+          "parallelism": ""
+        }
+      }
+    },
+    "description": "The Terraform plugin applies the infrastructure configuration contained within the repository.\nDocumentation is available here: https://plugins.drone.io/plugins/\nNOTE: Setting remote is not included due to unsupported variable type\nNOTE: Setting vars is not included due to unsupported variable type\nNOTE: Setting secrets is not included due to unsupported variable type",
+    "name": "Terraform",
+    "type": "Step",
+    "tags": {
+      "build tool": "",
+      "infrastructure": "",
+      "source": "drone",
+      "terraform": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "terraform",
+    "orgIdentifier": "my-org"
+  }
+}

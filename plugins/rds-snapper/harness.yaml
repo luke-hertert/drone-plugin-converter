@@ -1,0 +1,30 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: quay.io/honestbee/rds-snapper
+      connectorRef: <+input>
+      settings:
+        dbname: ""
+        action: ""
+        keep: 5
+        aws_access_key: ""
+        aws_region: ""
+        suffix: randomly generated
+        aws_secret_key: ""
+  description: |-
+    The rds-snapper plugin cleans up specific RDS instance's snapshots, keeps specified number of copies and creates new snapshots.
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: AWS RDS Snapper
+  type: Step
+  tags:
+    source: drone
+    aws: ""
+    amazon: ""
+    snapshot: ""
+    rds: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: rds_snapper
+  orgIdentifier: my-org
+

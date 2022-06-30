@@ -1,0 +1,35 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: drillster/drone-rsync
+      connectorRef: <+input>
+      settings:
+        source: ./
+        delete: false
+        recursive: false
+        user: root
+        key: ""
+        target: ""
+        port: 22
+        args: ""
+  description: |-
+    The rsync plugin can be used to transfer files to remote machines, and run a user-defined script afterwards.
+    Documentation is available here: https://plugins.drone.io/plugins/
+    NOTE: Setting hosts is not included due to unsupported variable type
+    NOTE: Setting include is not included due to unsupported variable type
+    NOTE: Setting exclude is not included due to unsupported variable type
+    NOTE: Setting script is not included due to unsupported variable type
+    NOTE: Setting prescript is not included due to unsupported variable type
+  name: rsync
+  type: Step
+  tags:
+    source: drone
+    publish: ""
+    ssh: ""
+    rsync: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: rsync
+  orgIdentifier: my-org
+

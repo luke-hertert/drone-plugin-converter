@@ -1,0 +1,60 @@
+{
+  "id": "rocket",
+  "title": "Rocket.Chat",
+  "author": "mike1pol",
+  "tags": [
+    "notifications",
+    "chat"
+  ],
+  "logo": "rocket.chat.svg",
+  "repo": "https://github.com/mike1pol/drone-rocket",
+  "image": "https://hub.docker.com/r/mike1pol/drone-rocket",
+  "license": "None",
+  "readme": "https://github.com/mike1pol/drone-rocket/blob/master/README.md",
+  "description": "Drone plugin for sending message to Rocket.Chant channel using API.",
+  "example": "kind: pipeline\nname: default\nsteps:\n- name: rocket\n  image: mike1pol/drone-rocket\n  settings:\n    url: xxxxxxxxxx\n    user_id: xxxxxxxxxx\n    token: xxxxxxxxxx\n    channel: xxxxxxxxxx\n",
+  "properties": {
+    "url": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "Rocket.chat url",
+      "required": true,
+      "secret": false
+    },
+    "user_id": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "Rocket.chat user id",
+      "required": true,
+      "secret": false
+    },
+    "token": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "Rocket.chat token",
+      "required": true,
+      "secret": true
+    },
+    "channel": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "Rocket.chat channel",
+      "required": true,
+      "secret": false
+    },
+    "avatar_url": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "override the default avatar of the user",
+      "required": false,
+      "secret": false
+    },
+    "message": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "the message contents (up to 2000 characters)",
+      "required": true,
+      "secret": false
+    }
+  }
+}

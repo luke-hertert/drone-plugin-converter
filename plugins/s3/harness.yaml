@@ -1,0 +1,36 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: plugins/s3
+      connectorRef: <+input>
+      settings:
+        exclude: ""
+        bucket: ""
+        secret_key: ""
+        region: ""
+        access_key: ""
+        endpoint: ""
+        path_style: false
+        source: ""
+        strip_prefix: ""
+        acl: ""
+        target: ""
+        encryption: ""
+  description: |-
+    The S3 plugin uploads files and build artifacts to your S3 bucket, or S3-compatible bucket such as Minio.
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: 'AWS S '
+  type: Step
+  tags:
+    source: drone
+    aws: ""
+    storage: ""
+    s3: ""
+    publish: ""
+    amazon: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: s3
+  orgIdentifier: my-org
+

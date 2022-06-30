@@ -1,0 +1,27 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "masci/drone-datadog",
+        "connectorRef": "<+input>",
+        "settings": {
+          "api_key": "",
+          "dry_run": false
+        }
+      }
+    },
+    "description": "The plugin can be used to send events and metrics to Datadog from a drone pipeline.\nDocumentation is available here: https://plugins.drone.io/plugins/\nNOTE: Setting metrics is not included due to unsupported variable type\nNOTE: Setting events is not included due to unsupported variable type",
+    "name": "Datadog",
+    "type": "Step",
+    "tags": {
+      "datadog": "",
+      "source": "drone",
+      "monitoring": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "datadog",
+    "orgIdentifier": "my-org"
+  }
+}

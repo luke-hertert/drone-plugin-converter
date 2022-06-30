@@ -1,0 +1,32 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: clem109/drone-wechat
+      connectorRef: <+input>
+      settings:
+        to_party: ""
+        to_tag: ""
+        description: ""
+        agent_id: ""
+        msg_url: ""
+        title: ""
+        corp_secret: ""
+        btntxt: ""
+        to_user: ""
+        corpid: ""
+  description: |-
+    Drone plugin for WeChat for Work to show build notifications.
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: Wechat for Work
+  type: Step
+  tags:
+    wechat: ""
+    chat: ""
+    source: drone
+    notifications: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: wechat_2
+  orgIdentifier: my-org
+

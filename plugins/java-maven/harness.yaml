@@ -1,0 +1,34 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: https://quay.io/repository/kameshsampath/drone-java-maven-plugin
+      connectorRef: <+input>
+      settings:
+        proxy_user: ""
+        server_user: ""
+        proxy_protocol: false
+        server_password: ""
+        proxy_password: ""
+        context_dir: ""
+        maven_mirror_url: ""
+        proxy_host: false
+        proxy_port: ""
+  description: |-
+    The Java Apache Maven plugin that can be used to build Java applications using Apache Maven build tool.
+    Documentation is available here: https://plugins.drone.io/plugins/
+    NOTE: Setting goals is not included due to unsupported variable type
+    NOTE: Setting maven_modules is not included due to unsupported variable type
+    NOTE: Setting proxy_non_proxy_hosts is not included due to unsupported variable type
+  name: Java Maven
+  type: Step
+  tags:
+    build: ""
+    source: drone
+    java: ""
+    maven: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: java_maven
+  orgIdentifier: my-org
+

@@ -1,0 +1,33 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "tsakidev/giteacomment",
+        "connectorRef": "<+input>",
+        "settings": {
+          "comment": "",
+          "gitea_token": "",
+          "gitea_base_url": "",
+          "comment_from_file": "",
+          "comment_title": ""
+        }
+      }
+    },
+    "description": "Use this plugin to update build status on Gitea Pull Request. This is useful when the complete team does not want to open drone dashboard for each build message.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "Gitea Comment",
+    "type": "Step",
+    "tags": {
+      "source": "drone",
+      "buildstatus": "",
+      "infrastructure": "",
+      "gitea": "",
+      "drone": "",
+      "comment": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "gitea_comment",
+    "orgIdentifier": "my-org"
+  }
+}

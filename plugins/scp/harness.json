@@ -1,0 +1,48 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "appleboy/drone-scp",
+        "connectorRef": "<+input>",
+        "settings": {
+          "proxy_host": "",
+          "tar_exec": "",
+          "proxy_password": "",
+          "overwrite": false,
+          "password": "",
+          "key": "",
+          "username": "",
+          "proxy_port": 0,
+          "proxy_key_passphrase": "",
+          "tar_tmp_path": "",
+          "source": "",
+          "command_timeout": 10,
+          "port": 22,
+          "rm": false,
+          "host": "",
+          "target": "",
+          "proxy_username": "",
+          "proxy_key": "",
+          "proxy_key_path": "",
+          "strip_components": 0,
+          "passphrase": "",
+          "timeout": 30
+        }
+      }
+    },
+    "description": "The SCP plugin copy files and artifacts to target host machine via SSH.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "SCP",
+    "type": "Step",
+    "tags": {
+      "source": "drone",
+      "publish": "",
+      "ssh": "",
+      "scp": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "scp",
+    "orgIdentifier": "my-org"
+  }
+}

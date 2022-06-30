@@ -1,0 +1,35 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "plugins/drone-gcs",
+        "connectorRef": "<+input>",
+        "settings": {
+          "source": "",
+          "cache_control": "",
+          "token": "",
+          "target": "",
+          "metadata": "",
+          "gzip": "",
+          "ignore": ""
+        }
+      }
+    },
+    "description": "The GCS plugin can be used to publish files and artifacts to Google Cloud Storage.\nDocumentation is available here: https://plugins.drone.io/plugins/\nNOTE: Setting acl is not included due to unsupported variable type",
+    "name": "Google Cloud Storage",
+    "type": "Step",
+    "tags": {
+      "source": "drone",
+      "gcp": "",
+      "gcs": "",
+      "storage": "",
+      "publish": "",
+      "google": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "gcs",
+    "orgIdentifier": "my-org"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "banzaicloud/drone-kaniko",
+        "connectorRef": "<+input>",
+        "settings": {
+          "context": "git repo root",
+          "target": "",
+          "password": "",
+          "registry": "",
+          "repo": "",
+          "dockerfile": "Dockerfile",
+          "username": ""
+        }
+      }
+    },
+    "description": "This plugin can be used to build and publish images to the Docker registry, using the Kaniko image builder. Unlike the Docker plugin you are not required you to run your agent in privileged mode.\nDocumentation is available here: https://plugins.drone.io/plugins/\nNOTE: Setting tags is not included due to unsupported variable type\nNOTE: Setting build_args is not included due to unsupported variable type",
+    "name": "Kaniko",
+    "type": "Step",
+    "tags": {
+      "docker": "",
+      "source": "drone",
+      "publish": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "kaniko",
+    "orgIdentifier": "my-org"
+  }
+}

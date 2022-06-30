@@ -1,0 +1,23 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: dhoeric/drone-airbrake-deployment
+      connectorRef: <+input>
+      settings:
+        airbrake_environment: ""
+  description: |-
+    Use the airbrake-deployment plugin to notify Airbrake of deployment in a certain environment.
+    Documentation is available here: https://plugins.drone.io/plugins/
+    NOTE: Setting secrets is not included due to unsupported variable type
+  name: airbrake deployment
+  type: Step
+  tags:
+    deployment: ""
+    source: drone
+    airbrake: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: airbrake_deployment
+  orgIdentifier: my-org
+

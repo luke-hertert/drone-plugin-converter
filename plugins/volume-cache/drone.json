@@ -1,0 +1,38 @@
+{
+  "id": "volume-cache",
+  "title": "Volume Cache",
+  "author": "drillster",
+  "tags": [
+    "cache"
+  ],
+  "logo": "volume_cache.svg",
+  "repo": "https://github.com/drillster/drone-volume-cache",
+  "image": "https://hub.docker.com/r/drillster/drone-volume-cache",
+  "license": "MIT License",
+  "readme": "https://github.com/Drillster/drone-volume-cache/blob/master/README.md",
+  "description": "The volume cache plugin can be used to preserve files and directories between builds.",
+  "example": "kind: pipeline\nname: default\n\nsteps:\n- name: restore-cache\n  image: drillster/drone-volume-cache\n  volumes:\n    - name: cache\n      path: /cache\n  settings:\n    restore: true\n    mount:\n      - ./node_modules\n- name: rebuild-cache\n  image: drillster/drone-volume-cache\n  volumes:\n    - name: cache\n      path: /cache\n  settings:\n    rebuild: true\n    mount:\n      - ./node_modules\n\nvolumes:\n  - name: cache\n    host:\n      path: /tmp/cache\n",
+  "properties": {
+    "restore": {
+      "type": "boolean",
+      "defaultValue": false,
+      "description": "Restore cache from previous build.",
+      "secret": false,
+      "required": false
+    },
+    "rebuild": {
+      "type": "boolean",
+      "defaultValue": false,
+      "description": "Rebuild cache.",
+      "secret": false,
+      "required": false
+    },
+    "mount": {
+      "type": "array",
+      "defaultValue": [],
+      "description": "list of folders or files to cache",
+      "secret": false,
+      "required": false
+    }
+  }
+}

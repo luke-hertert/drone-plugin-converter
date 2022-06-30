@@ -1,0 +1,29 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "aosapps/drone-sonar-plugin",
+        "connectorRef": "<+input>",
+        "settings": {
+          "sonar_token": "",
+          "sonar_host": ""
+        }
+      }
+    },
+    "description": "This plugin can scan your code quality and post the analysis report to your SonarQube server. SonarQube (previously called Sonar), is an open source code quality management platform.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "SonarQube",
+    "type": "Step",
+    "tags": {
+      "Sonar": "",
+      "Analysis": "",
+      "source": "drone",
+      "report": "",
+      "SonarQube": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "sonar_plugin",
+    "orgIdentifier": "my-org"
+  }
+}

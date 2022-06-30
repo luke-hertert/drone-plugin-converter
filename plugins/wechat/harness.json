@@ -1,0 +1,37 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "lizheming/drone-wechat",
+        "connectorRef": "<+input>",
+        "settings": {
+          "to_party": "",
+          "to_tag": "",
+          "btn_text": "",
+          "agent_id": "",
+          "msg_url": "",
+          "title": "",
+          "safe": false,
+          "corp_secret": "",
+          "message": "",
+          "to_user": "",
+          "corpid": ""
+        }
+      }
+    },
+    "description": "The Wechat plugin posts build status messages to your account.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "Wechat",
+    "type": "Step",
+    "tags": {
+      "wechat": "",
+      "chat": "",
+      "source": "drone",
+      "notifications": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "wechat",
+    "orgIdentifier": "my-org"
+  }
+}

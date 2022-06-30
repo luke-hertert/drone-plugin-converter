@@ -1,0 +1,31 @@
+{
+  "id": "newrelic-deployment",
+  "title": "Newrelic Deployment",
+  "author": "CityFurniture",
+  "tags": [
+    "newrelic"
+  ],
+  "logo": "newrelic.svg",
+  "repo": "https://github.com/cityfurniture/newrelic-deployment",
+  "image": "https://hub.docker.com/r/cityfurniture/drone-newrelic-deployment",
+  "license": "Apache License 2.0",
+  "readme": "https://github.com/CityFurniture/newrelic-deployment/blob/master/README.md",
+  "description": "The Newrelic deployment plugin reports/logs your deployment to your dashboard to make it easy to track changes.",
+  "example": "kind: pipeline\nname: default\n\nsteps:\n- name: newrelic\n  image: cityfurniture/drone-newrelic-deployment\n  settings:\n    api_key: <your-api-key>\n    app_name: <your-app-name>\n",
+  "properties": {
+    "api_key": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "Your Newrelic API key.",
+      "secret": true,
+      "required": true
+    },
+    "app_name": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "Your Newrelic application name.",
+      "secret": true,
+      "required": true
+    }
+  }
+}

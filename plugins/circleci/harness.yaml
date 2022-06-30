@@ -1,0 +1,26 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: wesleimp/drone-circleci
+      connectorRef: <+input>
+      settings:
+        branch: default
+        repo: ""
+        token: ""
+        user: ""
+  description: |-
+    The CircleCI plugin allows you to trigger builds automatically.
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: CircleCI
+  type: Step
+  tags:
+    trigger: ""
+    infrastructure: ""
+    source: drone
+    circleci: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: circleci
+  orgIdentifier: my-org
+

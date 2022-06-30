@@ -1,0 +1,75 @@
+{
+  "id": "sftp-cache",
+  "title": "SFTP Cache",
+  "author": "appleboy",
+  "tags": [
+    "cache",
+    "sftp",
+    "ssh"
+  ],
+  "logo": "term.svg",
+  "repo": "https://github.com/appleboy/drone-sftp-cache",
+  "image": "https://hub.docker.com/r/appleboy/drone-sftp-cache",
+  "readme": "https://github.com/appleboy/drone-sftp-cache/blob/master/README.md",
+  "license": "Apache License 2.0",
+  "description": "Use this plugin for caching build artifacts to speed up your build times. This plugin can create and restore caches of any folders.",
+  "example": "kind: pipeline\nname: default\n\nsteps:\n- name: restore_cache\n  image: appleboy/drone-sftp-cache\n  settings:\n    server: example.com\n    port: 22\n    username: test\n    password: test\n    path: /var/cache/drone\n    restore: true\n    mount:\n      - node_modules\n- name: build\n  image: node:latest\n  commands:\n    - npm install\n- name: rebuild_cache\n  image: appleboy/drone-sftp-cache\n  settings:\n    server: example.com\n    port: 22\n    username: test\n    password: test\n    path: /var/cache/drone\n    rebuild: true\n    mount:\n      - node_modules\n",
+  "properties": {
+    "server": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "target hostname or IP",
+      "secret": false,
+      "required": true
+    },
+    "port": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "ssh port of target host",
+      "secret": false,
+      "required": false
+    },
+    "username": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "account for target host user",
+      "secret": false,
+      "required": false
+    },
+    "password": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "password for target host user",
+      "secret": true,
+      "required": false
+    },
+    "key": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "plain text of user private key",
+      "secret": true,
+      "required": false
+    },
+    "rebuild": {
+      "type": "boolean",
+      "defaultValue": "",
+      "description": "flag to trigger a rebuild",
+      "secret": false,
+      "required": false
+    },
+    "restoe": {
+      "type": "boolean",
+      "defaultValue": "",
+      "description": "flag to trigger a restore",
+      "secret": false,
+      "required": false
+    },
+    "ignore_branch": {
+      "type": "boolean",
+      "defaultValue": "",
+      "description": "flag to ignore commit branch name on hash value",
+      "secret": false,
+      "required": false
+    }
+  }
+}

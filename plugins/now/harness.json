@@ -1,0 +1,35 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "lucap/drone-now",
+        "connectorRef": "<+input>",
+        "settings": {
+          "team": "",
+          "cleanup": false,
+          "now_token": "",
+          "alias": "",
+          "type": "",
+          "scale": "",
+          "deploy_name": "working directory",
+          "directory": "",
+          "rules_file": "",
+          "rules_domain": ""
+        }
+      }
+    },
+    "description": "The Now plugin deploy your build to now.sh.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "Now",
+    "type": "Step",
+    "tags": {
+      "now": "",
+      "deploy": "",
+      "source": "drone"
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "now",
+    "orgIdentifier": "my-org"
+  }
+}

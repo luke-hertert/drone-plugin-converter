@@ -1,0 +1,30 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: plugins/download
+      connectorRef: <+input>
+      settings:
+        source: ""
+        destination: ""
+        password: ""
+        skip_verify: false
+        md5: ""
+        sha256: ""
+        username: ""
+  description: |-
+    Use the Download plugin to download archives required for your builds, it also integrates a secure way to inject basic authentication credentials and checking by md5 or sha256 checksums.
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: Download
+  type: Step
+  tags:
+    source: drone
+    retrieve: ""
+    download: ""
+    archive: ""
+    tarball: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: download
+  orgIdentifier: my-org
+

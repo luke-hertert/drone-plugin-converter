@@ -1,0 +1,47 @@
+{
+  "id": "jenkins",
+  "title": "Jenkins",
+  "author": "appleboy",
+  "tags": [
+    "infrastructure",
+    "trigger",
+    "jenkins"
+  ],
+  "logo": "jenkins.svg",
+  "repo": "https://github.com/appleboy/drone-jenkins",
+  "image": "https://hub.docker.com/r/appleboy/drone-jenkins",
+  "license": "MIT License",
+  "readme": "https://github.com/appleboy/drone-jenkins/blob/master/README.md",
+  "description": "The Jenkins plugin allows you to trigger Jenkins job automatically.",
+  "example": "kind: pipeline\nname: default\n\nsteps:\n- name: trigger jenkins job\n  image: appleboy/drone-jenkins\n  settings:\n    url: http://example.com\n    user: appleboy\n    token: xxxxxxxxxx\n    job: drone-jenkins-plugin-job\n",
+  "properties": {
+    "url": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "The Jenkins URL",
+      "secret": false,
+      "required": true
+    },
+    "user": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "The Jenkins user",
+      "secret": false,
+      "required": true
+    },
+    "token": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "The Jenkins token",
+      "secret": true,
+      "required": true
+    },
+    "job": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "The Jenkins job name",
+      "secret": false,
+      "required": true
+    }
+  }
+}

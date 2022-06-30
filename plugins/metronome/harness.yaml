@@ -1,0 +1,23 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: naorlivne/drone-metronome
+      connectorRef: <+input>
+      settings:
+        metronome_job_file: metronome.json
+        metronome_host: http://metronome.mesos:9000
+  description: |-
+    This plugin can be used to deploy applications to a Metronome server, it will create\update the given Metronome tasks as needed.
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: Metronome
+  type: Step
+  tags:
+    deploy: ""
+    source: drone
+    metronome: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: metronome
+  orgIdentifier: my-org
+

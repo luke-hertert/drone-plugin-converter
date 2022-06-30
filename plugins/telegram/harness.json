@@ -1,0 +1,37 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "appleboy/drone-telegram",
+        "connectorRef": "<+input>",
+        "settings": {
+          "voice": "",
+          "location": "",
+          "photo": "",
+          "document": "",
+          "audio": "",
+          "token": "",
+          "format": "",
+          "venue": "",
+          "message": "",
+          "sticker": "",
+          "video": "",
+          "to": ""
+        }
+      }
+    },
+    "description": "The Telegram plugin posts build status messages to your account.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "Telegram",
+    "type": "Step",
+    "tags": {
+      "chat": "",
+      "source": "drone",
+      "notifications": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "telegram",
+    "orgIdentifier": "my-org"
+  }
+}

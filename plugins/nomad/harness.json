@@ -1,0 +1,30 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "loq9/drone-nomad",
+        "connectorRef": "<+input>",
+        "settings": {
+          "template": "",
+          "region": "",
+          "addr": "",
+          "namespace": "",
+          "token": ""
+        }
+      }
+    },
+    "description": "Use the Nomad plugin to deploy services from a template. You will need to supply Drone with the nomad template file.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "Nomad",
+    "type": "Step",
+    "tags": {
+      "orchestration": "",
+      "source": "drone",
+      "nomad": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "nomad",
+    "orgIdentifier": "my-org"
+  }
+}

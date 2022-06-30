@@ -1,0 +1,59 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "plugins/ansible",
+        "connectorRef": "<+input>",
+        "settings": {
+          "vault_id": "",
+          "list_tags": false,
+          "ssh_extra_args": "",
+          "force_handlers": false,
+          "verbose": 0,
+          "private_key": "",
+          "galaxy_force": true,
+          "vault_password": "",
+          "limit": "",
+          "connection": "",
+          "become": false,
+          "extra_vars": "",
+          "syntax_check": false,
+          "timeout": 0,
+          "become_user": "",
+          "sftp_extra_args": "",
+          "inventory": "",
+          "flush_cache": false,
+          "forks": 5,
+          "diff": false,
+          "scp_extra_args": "",
+          "start_at_task": "",
+          "requirements": "",
+          "user": "",
+          "ssh_common_args": "",
+          "list_tasks": false,
+          "check": false,
+          "module_path": "",
+          "become_method": "",
+          "playbook": "",
+          "galaxy": "",
+          "list_hosts": false
+        }
+      }
+    },
+    "description": "The Ansible plugin can be used to run ansible plays.\nDocumentation is available here: https://plugins.drone.io/plugins/\nNOTE: Setting skip_tags is not included due to unsupported variable type\nNOTE: Setting tags is not included due to unsupported variable type",
+    "name": "Ansible",
+    "type": "Step",
+    "tags": {
+      "ansible": "",
+      "infrastructure": "",
+      "ops": "",
+      "source": "drone",
+      "deploy": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "ansible",
+    "orgIdentifier": "my-org"
+  }
+}

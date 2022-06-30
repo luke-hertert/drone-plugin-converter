@@ -1,0 +1,34 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "athieriot/drone-artifactory",
+        "connectorRef": "<+input>",
+        "settings": {
+          "force_upload": false,
+          "url": "",
+          "group_id": "default to value from Pom file.",
+          "repo_key": "libs-snapshot-local if version contains snapshot, libs-release-local otherwise.",
+          "password": "",
+          "version": "default to value from Pom file.",
+          "artifact_id": "default to value from Pom file.",
+          "pom": "",
+          "username": ""
+        }
+      }
+    },
+    "description": "Use this plugin to publish artifacts from the build to Artifactory.\nDocumentation is available here: https://plugins.drone.io/plugins/\nNOTE: Setting files is not included due to unsupported variable type",
+    "name": "Artifactory",
+    "type": "Step",
+    "tags": {
+      "artifactory": "",
+      "source": "drone",
+      "publish": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "artifactory",
+    "orgIdentifier": "my-org"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "kit101z/drone-plugin-gitee-pulls",
+        "connectorRef": "<+input>",
+        "settings": {
+          "test_disabled": false,
+          "comment_disabled": false,
+          "api_server": "https://gitee.com/api/v5",
+          "running_label": "drone-build/running,E6A23C",
+          "label_disabled": false,
+          "debug": false,
+          "failure_label": "drone-build/failure,DB2828",
+          "access_token": "",
+          "is_running": false,
+          "success_label": "drone-build/success,67C23A"
+        }
+      }
+    },
+    "description": "This plugin can automatically update the comments / labels / test in PR to gitee.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "Gitee Pulls",
+    "type": "Step",
+    "tags": {
+      "teststatus": "",
+      "pullrequest": "",
+      "buildstatus": "",
+      "source": "drone",
+      "gitee": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "gitee_pulls",
+    "orgIdentifier": "my-org"
+  }
+}

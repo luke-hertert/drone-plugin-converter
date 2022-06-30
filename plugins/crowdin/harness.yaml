@@ -1,0 +1,28 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: jonasfranz/crowdin
+      connectorRef: <+input>
+      settings:
+        ignore_branch: false
+        export_dir: ""
+        download: true
+        project_key: ""
+        project_identifier: ""
+  description: |-
+    The Crowdin plugin allows you to submit translation files to Crowdin.
+    Documentation is available here: https://plugins.drone.io/plugins/
+    NOTE: Setting files is not included due to unsupported variable type
+    NOTE: Setting languages is not included due to unsupported variable type
+  name: Crowdin
+  type: Step
+  tags:
+    translation: ""
+    source: drone
+    publish: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: crowdin
+  orgIdentifier: my-org
+

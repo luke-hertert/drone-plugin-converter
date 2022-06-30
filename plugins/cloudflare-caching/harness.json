@@ -1,0 +1,28 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "jetrails/drone-cloudflare-caching",
+        "connectorRef": "<+input>",
+        "settings": {
+          "api_token": "",
+          "action": "purge_everything",
+          "zone_identifier": ""
+        }
+      }
+    },
+    "description": "Our Drone plugin enables the ability for your pipeline to interface with Cloudflare's API to purge cache.\nDocumentation is available here: https://plugins.drone.io/plugins/\nNOTE: Setting list is not included due to unsupported variable type",
+    "name": "Cloudflare Caching",
+    "type": "Step",
+    "tags": {
+      "cache": "",
+      "source": "drone",
+      "cloudflare": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "cloudflare_caching",
+    "orgIdentifier": "my-org"
+  }
+}

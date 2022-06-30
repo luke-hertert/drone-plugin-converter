@@ -1,0 +1,30 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "plugins/git",
+        "connectorRef": "<+input>",
+        "settings": {
+          "depth": "",
+          "tags": false,
+          "submodule_update_remote": false,
+          "skip_verify": false,
+          "recursive": false
+        }
+      }
+    },
+    "description": "The git plugin is used to clone a git repository. Note that Drone uses the git plugin by default for all repositories, without any configuration required.\nDocumentation is available here: https://plugins.drone.io/plugins/\nNOTE: Setting submodule_overrides is not included due to unsupported variable type",
+    "name": "Git",
+    "type": "Step",
+    "tags": {
+      "clone": "",
+      "git": "",
+      "source": "drone"
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "git",
+    "orgIdentifier": "my-org"
+  }
+}

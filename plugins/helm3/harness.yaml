@@ -1,0 +1,50 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: pelotech/drone-helm3
+      connectorRef: <+input>
+      settings:
+        kube_certificate: ""
+        chart_version: ""
+        keep_history: false
+        debug: false
+        skip_tls_verify: false
+        wait_for_upgrade: false
+        chart: ""
+        atomic_upgrade: false
+        repo_ca_certificate: ""
+        mode: ""
+        values_files: ""
+        timeout: ""
+        reuse_values: false
+        cleanup_failed_upgrade: false
+        kube_api_server: ""
+        repo_certificate: ""
+        update_dependencies: false
+        kube_service_account: ""
+        release: ""
+        force_upgrade: false
+        kube_token: ""
+        string_values: ""
+        namespace: ""
+        dry_run: false
+        values: ""
+        lint_strictly: false
+  description: |-
+    This plugin provides an interface to Helm 3.
+    Documentation is available here: https://plugins.drone.io/plugins/
+    NOTE: Setting add_repos is not included due to unsupported variable type
+  name: 'Helm '
+  type: Step
+  tags:
+    source: drone
+    docker: ""
+    helm3: ""
+    helm: ""
+    kubernetes: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: helm3
+  orgIdentifier: my-org
+

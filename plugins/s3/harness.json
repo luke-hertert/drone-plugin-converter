@@ -1,0 +1,40 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "plugins/s3",
+        "connectorRef": "<+input>",
+        "settings": {
+          "source": "",
+          "region": "",
+          "bucket": "",
+          "endpoint": "",
+          "encryption": "",
+          "access_key": "",
+          "target": "",
+          "strip_prefix": "",
+          "path_style": false,
+          "exclude": "",
+          "acl": "",
+          "secret_key": ""
+        }
+      }
+    },
+    "description": "The S3 plugin uploads files and build artifacts to your S3 bucket, or S3-compatible bucket such as Minio.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "AWS S ",
+    "type": "Step",
+    "tags": {
+      "source": "drone",
+      "aws": "",
+      "storage": "",
+      "s3": "",
+      "publish": "",
+      "amazon": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "s3",
+    "orgIdentifier": "my-org"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "template": {
+    "spec": {
+      "type": "Plugin",
+      "spec": {
+        "image": "plugins/s3-sync",
+        "connectorRef": "<+input>",
+        "settings": {
+          "content_encoding": "",
+          "cache_control": "",
+          "bucket": "",
+          "content_type": "",
+          "redirects": "",
+          "secret_key": "",
+          "region": "us-east-1",
+          "access_key": "",
+          "delete": false,
+          "cloudfront_distribution": "",
+          "dry_run": false,
+          "source": ".",
+          "acl": "",
+          "target": "/",
+          "metadata": ""
+        }
+      }
+    },
+    "description": "The S3 sync synchronizes files and build artifacts to your S3 bucket.\nDocumentation is available here: https://plugins.drone.io/plugins/",
+    "name": "AWS S  Sync",
+    "type": "Step",
+    "tags": {
+      "source": "drone",
+      "aws": "",
+      "storage": "",
+      "sync": "",
+      "s3": "",
+      "publish": "",
+      "amazon": ""
+    },
+    "projectIdentifier": "my-project",
+    "versionLabel": "v1",
+    "identifier": "s3_sync",
+    "orgIdentifier": "my-org"
+  }
+}

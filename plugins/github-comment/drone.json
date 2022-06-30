@@ -1,0 +1,49 @@
+{
+  "id": "github-comment",
+  "title": "Github Comment",
+  "author": "codehimanshu",
+  "tags": [
+    "infrastructure",
+    "github",
+    "drone",
+    "comment",
+    "buildstatus"
+  ],
+  "logo": "github.svg",
+  "repo": "https://github.com/gradeup/drone-github-comment",
+  "image": "https://hub.docker.com/r/codehimanshu/gitdrone",
+  "license": "None",
+  "readme": "https://github.com/gradeup/drone-github-comment/blob/master/README.md",
+  "description": "Use this plugin to update build status on Github Pull Request. This is useful when the complete team does not want to open drone dashboard for each build message.",
+  "example": "kind: pipeline\nname: default\n\nsteps:\n- name: update-status-to-github\n  image: codehimanshu/gitdrone:1.7\n  settings:\n    drone_access_token:\n      from_secret: drone_access_token\n    github_installation_id:\n      from_secret: github_installation_id\n    github_app_id: 38899\n    private_key:\n      from_secret: private_key\n",
+  "properties": {
+    "drone_access_token": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "drone server auth token",
+      "secret": false,
+      "required": true
+    },
+    "github_installation_id": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "installation id of github app for drone",
+      "secret": false,
+      "required": true
+    },
+    "github_app_id": {
+      "type": "string",
+      "defaultValue": 38899,
+      "description": "your app id for drone on github",
+      "secret": false,
+      "required": true
+    },
+    "private_key": {
+      "type": "string",
+      "defaultValue": "",
+      "description": "from github app installation",
+      "secret": false,
+      "required": true
+    }
+  }
+}

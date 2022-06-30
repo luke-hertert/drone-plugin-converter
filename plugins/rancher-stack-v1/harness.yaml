@@ -1,0 +1,29 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: dubc/drone-rancher-stack-v1
+      connectorRef: <+input>
+      settings:
+        pull: true
+        secretkey: ""
+        url: ""
+        accesskey: ""
+        stack: ""
+  description: |-
+    A drone.io Rancher Stack plugin to deploy/update an entire Rancher stack (not just a single service) to Rancher v1.6. See Docker Hub for more information.
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: 'Rancher Stack v '
+  type: Step
+  tags:
+    source: drone
+    docker: ""
+    deploy: ""
+    rancher: ""
+    v1: ""
+    stack: ""
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: rancher_stack_v1
+  orgIdentifier: my-org
+

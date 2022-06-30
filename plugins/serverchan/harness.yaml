@@ -1,0 +1,24 @@
+template:
+  spec:
+    type: Plugin
+    spec:
+      image: yakumioto/drone-serverchan
+      connectorRef: <+input>
+      settings:
+        text: ""
+        key: ""
+        desp: ""
+  description: |-
+    The ServerChan plugin posts build status messages to your account.
+    Documentation is available here: https://plugins.drone.io/plugins/
+  name: 'ServerChan Server  '
+  type: Step
+  tags:
+    serverchan: ""
+    Server酱: ""
+    source: drone
+  projectIdentifier: my-project
+  versionLabel: v1
+  identifier: serverchan
+  orgIdentifier: my-org
+
